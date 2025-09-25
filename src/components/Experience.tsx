@@ -5,32 +5,32 @@ const Experience = () => {
     {
       icon: Target,
       title: "Antrenamente inteligente și cu scop",
-      description: "Programe specifice pentru femeile 40+, adaptate metabolismului și hormonilor în schimbare",
+      description: "Îți arată cum să scapi de grăsimea de pe burtă, să construiești mușchi pentru forță și independență și să stopezi osteoporoza care afectează 60% dintre femeile de peste 50 de ani.",
     },
     {
       icon: Utensils,
       title: "Nutriție personalizată",
-      description: "Planuri alimentare care susțin energia și echilibrul hormonal, nu restricții extreme",
+      description: "Îndrumare practică despre ce, când și cum să mănânci pentru a susține inteligent această transformare. Fără înfometare, fără restricții absurde – doar soluții aplicabile în propria bucătărie.",
     },
     {
       icon: Heart,
       title: "Fiziologia unică a femeii",
-      description: "Înțelegerea profundă a schimbărilor corporale și adaptarea strategiilor în consecință",
+      description: "Explicată simplu, fără termeni complicați: cum funcționam înainte de 40 de ani și ce se schimbă după.",
     },
     {
       icon: BookOpen,
       title: "Workshopuri educaționale",
-      description: "Sesiuni interactive pentru a-ți înțelege corpul și a face alegeri informate",
+      description: "Sesiuni zilnice care simplifică teme complexe în lecții clare și aplicabile imediat.",
     },
     {
       icon: Star,
       title: "Cazare 5 stele",
-      description: "Confort și lux la Domeniul Toma, un cadru perfect pentru transformare",
+      description: "Confort premium, într-un cadru luxos care îți susține transformarea.",
     },
     {
       icon: Users,
-      title: "Atmosferă intimă",
-      description: "Maxim 20 participante pentru atenție personalizată și conexiuni autentice",
+      title: "Atmosferă intimă și exclusivă",
+      description: "Limitat la 20 de participante, pentru atenție personală și conexiune autentică.",
     },
   ];
 
@@ -42,8 +42,7 @@ const Experience = () => {
             Experiența de 4 zile care îți va schimba viața
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            Acesta nu este un program de relaxare – este un program educațional intensiv 
-            care îți va oferi toate instrumentele necesare pentru transformarea pe termen lung.
+            Este o experiență educațională intensivă. Nu este o escapadă relaxantă, ci un program complet prin care îți iei corpul și viața înapoi. Pe scurt: pleci informată și la cârma vieții tale, cu soluții și un plan pe care le poți aplica imediat.
           </p>
         </div>
         

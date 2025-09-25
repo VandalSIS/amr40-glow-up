@@ -4,8 +4,8 @@ import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
 const Pricing = () => {
   const pricingOptions = [
     {
-      type: "Cameră Single",
-      price: "1.257€",
+      type: "Cameră single",
+      price: "1257€",
       description: "Confort complet și intimitate pentru concentrare maximă",
       features: [
         "Camera single cu baie privată",
@@ -18,8 +18,8 @@ const Pricing = () => {
       popular: false
     },
     {
-      type: "Cameră Dublă",
-      price: "1.021€",
+      type: "Cameră dublă",
+      price: "1021€",
       description: "Experiență completă cu posibilitatea de a împărți cu o prietenă",
       features: [
         "Camera dublă cu baie privată",
@@ -41,7 +41,7 @@ const Pricing = () => {
             Ești gata să îți transformi viața?
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Alege opțiunea de cazare care ți se potrivește și începe călătoria către cea mai bună versiune a ta.
+            Alătură-te unei experiențe all-inclusive de 4 zile, într-o locație luxoasă de 5 stele.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">

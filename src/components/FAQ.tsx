@@ -8,36 +8,40 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "Pentru cine este potrivit acest program?",
-      answer: "Programul este dedicat femeilor de peste 40 de ani care se confruntă cu schimbări hormonale, metabolice și de energie. Fie că ești la începutul perimenopuzei sau în plină menopauză, Metoda AMR 40+ te va ajuta să îți recapeți controlul asupra corpului."
+      question: "Cui i se adresează acest retreat?",
+      answer: "Retreatul este destinat tuturor femeilor, atât cele care trec prin simptomele perimenopauzei și menopauzei cât și celor care vor să își pregătească corpul și mintea pentru această etapă. Nicio femeie nu scapă de consecințele diminuării hormonilor – cu simptome sau fără, ele se instalează dacă nu facem ceva să le prevenim."
     },
     {
-      question: "Am nevoie de experiență anterioară în fitness?",
-      answer: "Nu! Programul este adaptat pentru toate nivelurile. Fie că ești începătoare sau ai experiență în fitness, vei primi strategii personalizate pentru situația ta specifică."
+      question: "Ce nivel de fitness este necesar?",
+      answer: "Ideal este să fii o femeie activă, dar indiferent de nivelul tău actual, exercițiile sunt adaptate pentru fiecare. De la începătoare la avansate, vei primi sprijin și provocări pe măsura ta."
     },
     {
-      question: "Ce este inclus în preț?",
-      answer: "Prețul include: cazarea pentru 4 zile la Domeniul Toma (5 stele), toate mesele, toate workshopurile și antrenamentele, materialele educaționale, planul tău personalizat, suportul pentru 90 de zile și accesul la comunitatea exclusivă."
+      question: "Ce este inclus în pachetul retreatului?",
+      answer: "Cazare în camere de 5 stele, toate mesele, workshopuri zilnice, sesiuni de fitness personalizate, practici de recuperare, acces la saună și resurse exclusive. Apă și cafea incluse pe durata sesiunilor."
     },
     {
-      question: "Pot veni cu o prietenă?",
-      answer: "Absolut! Multe participante aleg să vină cu o prietenă pentru suport suplimentar. Poți rezerva o cameră dublă și să împarți experiența cu cineva apropiat."
+      question: "După cele 4 zile, voi putea continua singură ce am învățat?",
+      answer: "Da! Scopul programului este să te împuternicesc să pui imediat in practica singură ceea ce primești. După retreat vei ști exact ce ai de făcut și cum să ceri sprijinul altora (de la antrenor, bucătar sau familie), atunci când ai nevoie."
     },
     {
-      question: "Ce dacă am restricții alimentare?",
-      answer: "Echipa noastră culinară poate accommoda majoritatea restricțiilor alimentare. Te rugăm să ne informezi la momentul rezervării despre orice alergii sau preferințe dietetice."
+      question: "Voi primi materiale de suport?",
+      answer: "Da. Primești liste de cumpărături cu poze, meniuri și rețete simple, rutine de antrenament, diagrame explicative despre hormoni și macronutrienți, plus un rezumat practic cu tips & tricks."
     },
     {
-      question: "Cum arată o zi tipică în program?",
-      answer: "Fiecare zi include: sesiuni educaționale dimineața, antrenamente personalizate, mese nutritive, workshopuri practice și timp pentru relaxare și networking cu celelalte participante."
+      question: "Ce fel de mâncare vom avea la retreat?",
+      answer: "Mesele sunt create special pentru nevoile femeilor. Simple, gustoase, hrănitoare, cu proteine de calitate (carne, pește, ouă), ca să îți fie ușor să le reproduci și acasă."
     },
     {
-      question: "Există o politică de rambursare?",
-      answer: "Da, oferim o garanție de satisfacție de 30 de zile. Dacă nu ești complet mulțumită de experiența ta, îți returnăm integral investiția."
+      question: "Pot să stau singură în cameră?",
+      answer: "Da. Domeniul Toma are camere single și duble. Alegerea depinde de preferințe și de disponibilitate în momentul rezervării."
     },
     {
-      question: "Cum mă pregătesc pentru program?",
-      answer: "Odată ce îți rezervi locul, vei primi un ghid de pregătire cu toate informațiile necesare, inclusiv ce să împachetezi și cum să îți pregătești mintea pentru transformare."
+      question: "Este un retreat spiritual sau practic?",
+      answer: "Este un program practic. Vei face antrenamente eficiente pentru mușchi, oase și inimă și vei primi educație simplă și aplicabilă, bazată pe știință."
+    },
+    {
+      question: "Ce haine să îmi aduc?",
+      answer: "Echipament sportiv comod, adidași de schimb, o bluză cu mânecă lungă și o geacă subțire pentru sesiunile în aer liber (dacă vremea permite). După înscriere vei primi lista completă."
     }
   ];
 

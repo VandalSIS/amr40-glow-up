@@ -10,7 +10,7 @@ const AboutCoach = () => {
             Întâlnește-ți ghidul expert
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-            O călătorie de transformare ghidată de experiență și pasiune
+            Descoperă îndrumarea, suportul personalizat și instrumentele bazate pe știință de care ai nevoie prin această experiență transformatoare
           </p>
         </div>
         
@@ -43,19 +43,25 @@ const AboutCoach = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <p className="font-sans text-foreground">
-                  <strong>Licențiată în Management</strong> cu specializare în optimizarea performanței
+                  <strong>Peste 20 de ani experiență</strong> în fitness și nutriție, fostă atletă de performanță
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <p className="font-sans text-foreground">
-                  <strong>Master în Nutriție și PR</strong> pentru o abordare holistică
+                  <strong>Licențiată în Management</strong>, Master în Nutriție și PR
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <p className="font-sans text-foreground">
-                  <strong>Antrenor certificat</strong> cu focus pe nevoile specifice ale femeilor 40+
+                  <strong>Antrenor personal certificat</strong>, cu multiple specializări, inclusiv Menopause Coaching Specialist
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <p className="font-sans text-foreground">
+                  <strong>Manager de Fitness</strong> și formator a peste 500 de antrenori personali
                 </p>
               </div>
             </div>
@@ -63,9 +69,7 @@ const AboutCoach = () => {
             <div className="relative bg-white p-6 rounded-xl shadow-card">
               <Quote className="h-8 w-8 text-secondary mb-4" />
               <blockquote className="font-sans text-foreground italic leading-relaxed">
-                "Vreau să schimb conversația despre fitness și nutriție pentru femei. Nu mai este vorba 
-                despre restricții și chin, ci despre înțelegerea corpului tău și oferirea exactului de 
-                care are nevoie pentru a prospera în această nouă etapă a vieții."
+                "Vreau să schimb conversația despre fitness și nutriție pentru femei, să te ajut să preiei controlul asupra vieții tale, atunci când hormonii tăi, vor altceva. Pentru că femeile sunt diferite de bărbați și pentru că după 40 de ani, când toți din jurul tău îți spun să o lași mai moale… că e cazul să te uiți în buletin… noi, femeile, de fapt trebuie să sprintăm. Pentru că putem!"
               </blockquote>
               <cite className="font-accent font-semibold text-primary mt-4 block">
                 — Iulia Popa

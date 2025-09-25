@@ -4,34 +4,44 @@ import { Button } from "@/components/ui/button";
 const Benefits = () => {
   const benefits = [
     {
-      icon: FileText,
-      title: "Planul tău personalizat de antrenament",
-      description: "Programe specifice adaptate vârstei și nevoilor tale unice"
+      icon: CheckCircle2,
+      title: "O metodă CLARĂ și SIMPLĂ, pe care o poți aplica imediat",
+      description: ""
     },
     {
-      icon: Utensils,
-      title: "Ghidul complet de nutriție 40+",
-      description: "Strategii alimentare pentru echilibrul hormonal și energie optimă"
+      icon: FileText,
+      title: "Structură și strategie pentru ceea ce ai de făcut în continuare",
+      description: ""
     },
     {
       icon: Video,
-      title: "Acces la biblioteca de resurse",
-      description: "Videouri, workshopuri și materiale educaționale pentru viață"
+      title: "O metodă de ANTRENAMENT care construiește mușchi, arde grăsimi și întărește oasele",
+      description: ""
     },
     {
-      icon: Users2,
-      title: "Comunitatea AMR 40+",
-      description: "Conexiuni cu femei care înțeleg călătoria ta și te susțin"
+      icon: Utensils,
+      title: "Reguli simple de alimentație care îți schimbă viața și viziunea asupra mâncării și care îți susțin mușchii și arderea grăsimilor",
+      description: ""
+    },
+    {
+      icon: FileText,
+      title: "Rețete și meniuri adaptate nevoilor tale, simplu de preparat acasă",
+      description: ""
     },
     {
       icon: Clock,
-      title: "Suport continuu 90 de zile",
-      description: "Îndrumări și răspunsuri la întrebări în primele 3 luni"
+      title: "Liste de cumpărături clare: ce produse să alegi, de unde și ce să ai mereu în frigider",
+      description: ""
     },
     {
       icon: Shield,
-      title: "Garanție de satisfacție",
-      description: "Dacă nu ești mulțumită, îți returnăm banii în primele 30 de zile"
+      title: "Curajul de a acționa, pentru că acum știi exact ce să faci",
+      description: ""
+    },
+    {
+      icon: FileText,
+      title: "Un rezumat practic cu tips & tricks, pe care îl poți lipi pe frigider pentru aplicare imediată",
+      description: ""
     }
   ];
 
@@ -43,12 +53,11 @@ const Benefits = () => {
             Planul tău complet pentru viață
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            Nu primești doar o experiență de 4 zile – primești toate instrumentele 
-            necesare pentru o transformare care durează toată viața.
+            Nu primești doar inspirație, ci și pași concreți care fac diferența în corpul și viața ta de acum înainte:
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
@@ -60,12 +69,9 @@ const Benefits = () => {
                   <benefit.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-accent font-semibold text-lg text-foreground mb-2">
+                  <h3 className="font-accent font-semibold text-base text-foreground leading-relaxed">
                     {benefit.title}
                   </h3>
-                  <p className="font-sans text-muted-foreground text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
                 </div>
               </div>
             </div>

@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/iulia-popa-photo.jpg";
+import heroImage from "@/assets/hero-wellness-women.jpg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Iulia Popa - Fitness Specialist și Menopause Coach"
-          className="w-full h-full object-cover"
+          alt="Wellness pentru femei - Metoda AMR 40+"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       {/* Content */}

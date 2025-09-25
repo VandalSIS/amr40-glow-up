@@ -7,39 +7,24 @@ const AMRMethod = () => {
       letter: "A",
       title: "Antrenament",
       subtitle: "Inteligent și adaptat",
-      description: "Programe de fitness specifice pentru femeile 40+, care respectă schimbările hormonale și metabolice. Nu mai mult, ci mai inteligent.",
-      benefits: [
-        "Antrenament de forță pentru menținerea masei musculare",
-        "Exerciții funcționale pentru viața de zi cu zi",
-        "Programe adaptate ciclului hormonal",
-        "Recuperare optimizată între sesiuni"
-      ]
+      description: "Antrenamentul nu este opțional, este esențial pentru sănătate și longevitate. Abordarea prin metoda A.M.R. îți oferă claritate și rezultate imediate.",
+      benefits: []
     },
     {
       icon: Apple,
       letter: "M",
       title: "Mâncare",
       subtitle: "Nutriție personalizată",
-      description: "Strategii alimentare care susțin echilibrul hormonal și energia, nu restricții extreme care îți sabotează metabolismul.",
-      benefits: [
-        "Planuri alimentare pentru echilibrul hormonal",
-        "Strategii pentru accelerarea metabolismului",
-        "Alimente care reduc inflamația",
-        "Timing optim al meselor pentru energia maximă"
-      ]
+      description: "Viața înseamnă consum de energie. Orice facem și gândim se face prin consum de energie. Și SINGURA sursă de energie este mâncarea pe care o mâncăm și apa pe care o bem. Astfel, putem spune foarte sigur că: Ce, cum, cât și când mâncăm ne influențează întreaga existență. Dupa 40 de ani nevoile alimentare ale femeii sunt diferite, iar Metoda A.M.R. 40+ asta rezolva.",
+      benefits: []
     },
     {
       icon: Heart,
       letter: "R",
       title: "Recuperare",
       subtitle: "Elementul secret",
-      description: "Componenta cea mai neglijată dar cea mai importantă pentru femeile 40+. Fără recuperare adecvată, antrenamentul și nutriția nu pot funcționa.",
-      benefits: [
-        "Strategii pentru somn de calitate",
-        "Managementul stresului și cortizolului",
-        "Tehnici de relaxare și mindfulness",
-        "Optimizarea recuperării hormonale"
-      ]
+      description: "Muschii se construiesc si grasimea se arde in timp ce te odihnesti, dupa ce te-ai antrenat și după ce ai mancat ce trebuie. Te invăț cum să faci asta perfect.",
+      benefits: []
     }
   ];
 
@@ -51,7 +36,7 @@ const AMRMethod = () => {
             Metoda A.M.R. 40+
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            O abordare holistică și științifică, creată special pentru nevoile unice ale femeilor de peste 40 de ani.
+            O abordare inteligentă și cu scop, dovedită de știință și experiență, pentru combaterea și prevenirea principalelor 3 consecințe ale diminuării principalilor hormonilor feminini la peri & postmenopauză:
           </p>
         </div>
         
