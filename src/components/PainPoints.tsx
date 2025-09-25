@@ -22,7 +22,7 @@ const PainPoints = () => {
     },
     {
       icon: RotateCcw,
-      title: "Ai impresia că ești un „hamster" într-o rotiță care tot aleargă și nu ajunge nicăieri?",
+      title: "Ai impresia că ești un \"hamster\" într-o rotiță care tot aleargă și nu ajunge nicăieri?",
       description: "",
       color: "text-secondary-foreground"
     },
