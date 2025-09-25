@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-wellness-women.jpg";
+import heroImage from "@/assets/iulia-popa-photo.jpg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Femei active 40+ într-un cadru natural wellness"
+          alt="Iulia Popa - Fitness Specialist și Menopause Coach"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>

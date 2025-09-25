@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, MapPin, Calendar, Users } from "lucide-react";
+import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
 
 const Pricing = () => {
   const pricingOptions = [
@@ -120,9 +120,13 @@ const Pricing = () => {
         
         <div className="text-center mt-16">
           <div className="inline-block bg-gradient-primary p-6 rounded-2xl shadow-elegant text-white max-w-2xl">
-            <h3 className="font-serif text-xl font-bold mb-3">
-              ⚠️ Locuri Limitate
-            </h3>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <AlertTriangle className="h-6 w-6 text-accent" />
+              <h3 className="font-serif text-xl font-bold">
+                Locuri Limitate
+              </h3>
+              <AlertTriangle className="h-6 w-6 text-accent" />
+            </div>
             <p className="font-sans leading-relaxed">
               Pentru a asigura atenția personalizată și calitatea experienței, 
               acceptăm maximum 20 de participante. Nu rata această oportunitate unică!

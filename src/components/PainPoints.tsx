@@ -1,4 +1,4 @@
-import { AlertCircle, TrendingDown, Zap, RotateCcw } from "lucide-react";
+import { AlertCircle, TrendingDown, Zap, RotateCcw, Star } from "lucide-react";
 
 const PainPoints = () => {
   const painPoints = [
@@ -67,9 +67,13 @@ const PainPoints = () => {
         
         <div className="text-center mt-12">
           <div className="inline-block bg-gradient-secondary p-6 rounded-2xl shadow-soft">
-            <p className="font-accent text-lg font-semibold text-foreground">
-              🌟 Dacă te regăsești în aceste situații, ești în locul potrivit
-            </p>
+            <div className="flex items-center justify-center gap-3">
+              <Star className="h-6 w-6 text-primary" />
+              <p className="font-accent text-lg font-semibold text-foreground">
+                Dacă te regăsești în aceste situații, ești în locul potrivit
+              </p>
+              <Star className="h-6 w-6 text-primary" />
+            </div>
           </div>
         </div>
       </div>

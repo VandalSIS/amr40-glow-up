@@ -8,44 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Primary Brand Colors */
-    --primary: 297 22% 42%; /* Elegant purple #8B4B8C */
+    /* Primary Brand Colors - Sage Green Palette */
+    --primary: 90 10% 60%; /* Sage green #96A78D */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 297 22% 55%;
-    --primary-dark: 297 22% 30%;
+    --primary-light: 115 21% 76%; /* Light sage #B6CEB4 */
+    --primary-dark: 90 10% 45%; /* Dark sage */
     
     /* Secondary & Accent Colors */
-    --secondary: 348 31% 85%; /* Powder pink #E8B4B8 */
+    --secondary: 97 33% 86%; /* Very light sage #D9E9CF */
     --secondary-foreground: 0 0% 17%;
-    --accent: 40 42% 65%; /* Gold #D4A574 */
+    --accent: 90 15% 50%; /* Medium sage accent */
     --accent-foreground: 0 0% 17%;
     
     /* Neutral Colors */
-    --background: 0 0% 100%; /* Clean white #FEFEFE */
+    --background: 0 0% 94%; /* Light grey #F0F0F0 */
     --foreground: 0 0% 17%; /* Dark gray #2C2C2C */
-    --section-bg: 40 25% 96%; /* Very light beige #F8F6F3 */
+    --section-bg: 0 0% 98%; /* Very light grey */
     
     /* UI Elements */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 17%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 17%;
-    --muted: 40 25% 96%;
+    --muted: 97 33% 86%;
     --muted-foreground: 0 0% 45%;
-    --border: 40 15% 90%;
-    --input: 40 15% 95%;
-    --ring: 297 22% 42%;
+    --border: 97 20% 90%;
+    --input: 97 20% 95%;
+    --ring: 90 10% 60%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(297 22% 42%), hsl(297 22% 55%));
-    --gradient-secondary: linear-gradient(135deg, hsl(348 31% 85%), hsl(40 42% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(297 22% 42% / 0.9), hsl(297 22% 30% / 0.9));
+    /* Gradients - Sage Green Palette */
+    --gradient-primary: linear-gradient(135deg, hsl(90 10% 60%), hsl(115 21% 76%));
+    --gradient-secondary: linear-gradient(135deg, hsl(115 21% 76%), hsl(97 33% 86%));
+    --gradient-hero: linear-gradient(135deg, hsl(90 10% 45% / 0.9), hsl(90 10% 35% / 0.9));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(297 22% 42% / 0.1);
-    --shadow-elegant: 0 10px 40px hsl(297 22% 42% / 0.15);
+    --shadow-soft: 0 4px 20px hsl(90 10% 60% / 0.1);
+    --shadow-elegant: 0 10px 40px hsl(90 10% 60% / 0.15);
     --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.08);
     
     /* Transitions */
