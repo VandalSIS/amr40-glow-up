@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/getimg_ai_img-MpIcdLRY1WY5HMFEXZxpH.jpeg";
+import heroImage from "@/assets/hero-wellness-women.jpg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
           src={heroImage} 
           alt="Wellness pentru femei - Metoda AMR 40+"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 10%' }}
+          style={{ objectPosition: 'center center' }}
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
