@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import IntroBanner from "@/components/IntroBanner";
 import AboutCoach from "@/components/AboutCoach";
 import PainPoints from "@/components/PainPoints";
 import Experience from "@/components/Experience";
-import Benefits from "@/components/Benefits";
 import Sponsors from "@/components/Sponsors";
 import AMRMethod from "@/components/AMRMethod";
 import Pricing from "@/components/Pricing";
@@ -15,11 +15,11 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <IntroBanner />
       <AboutCoach />
       <PainPoints />
       <Experience />
       <AMRMethod />
-      <Benefits />
       <Sponsors />
       <Pricing />
       <FAQ />
