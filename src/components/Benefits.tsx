@@ -56,7 +56,7 @@ const Benefits = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
