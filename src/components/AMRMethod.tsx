@@ -29,7 +29,7 @@ const AMRMethod = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="consultanta" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">

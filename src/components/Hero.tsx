@@ -4,7 +4,7 @@ import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0">
         <img 

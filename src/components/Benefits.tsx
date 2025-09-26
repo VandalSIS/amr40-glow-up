@@ -79,7 +79,7 @@ const Benefits = () => {
         </div>
         
         <div className="text-center">
-          <div className="inline-block bg-gradient-secondary p-6 lg:p-8 rounded-2xl shadow-soft mb-6 lg:mb-8">
+          <div className="inline-block bg-gradient-secondary p-6 lg:p-8 rounded-2xl shadow-soft">
             <div className="flex items-center justify-center gap-2 mb-3 lg:mb-4">
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
               <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground">
@@ -91,9 +91,6 @@ const Benefits = () => {
               Investiția ta de astăzi pentru următorii 40 de ani
             </p>
           </div>
-          <Button size="lg" variant="premium" className="animate-scale-in text-sm lg:text-base">
-            Rezervă-ți transformarea acum
-          </Button>
         </div>
       </div>
     </section>

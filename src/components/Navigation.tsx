@@ -10,9 +10,13 @@ const Navigation = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -23,9 +27,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="font-serif text-xl font-bold text-primary">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="font-serif text-xl font-bold text-primary hover:text-primary-light transition-colors"
+            >
               Iulia Popa
-            </h1>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -48,19 +55,18 @@ const Navigation = () => {
             >
               FAQ
             </button>
+            <button
+              onClick={() => scrollToSection('consultanta')}
+              className="font-sans text-foreground hover:text-primary transition-colors"
+            >
+              Consultanță 1:1
+            </button>
             <Button 
               onClick={() => scrollToSection('rezervare')}
-              variant="outline"
-              size="sm"
-            >
-              Rezervă acum
-            </Button>
-            <Button 
-              onClick={() => scrollToSection('consultanta')}
               variant="hero"
               size="sm"
             >
-              Consultanță 1:1
+              Rezervă acum
             </Button>
           </div>
 
@@ -97,22 +103,20 @@ const Navigation = () => {
               >
                 FAQ
               </button>
-              <div className="px-3 py-2 space-y-2">
+              <button
+                onClick={() => scrollToSection('consultanta')}
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors w-full text-left"
+              >
+                Consultanță 1:1
+              </button>
+              <div className="px-3 py-2">
                 <Button 
                   onClick={() => scrollToSection('rezervare')}
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                >
-                  Rezervă acum
-                </Button>
-                <Button 
-                  onClick={() => scrollToSection('consultanta')}
                   variant="hero"
                   size="sm"
                   className="w-full"
                 >
-                  Consultanță 1:1
+                  Rezervă acum
                 </Button>
               </div>
             </div>
