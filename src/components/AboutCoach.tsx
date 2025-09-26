@@ -1,4 +1,4 @@
-import coachImage from "@/assets/iulia-popa-photo.jpg";
+import coachImage from "@/assets/12345.jpg";
 import { Quote } from "lucide-react";
 
 const AboutCoach = () => {

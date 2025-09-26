@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-wellness-women.jpg";
+import heroImage from "@/assets/getimg_ai_img-MpIcdLRY1WY5HMFEXZxpH.jpeg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
@@ -10,19 +10,20 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Wellness pentru femei - Metoda AMR 40+"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 10%' }}
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="animate-fade-in">
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-2xl">
             Te invit să trăiești 4 zile care îți pot schimba următorii 40 de ani!
           </h1>
           
-          <p className="font-sans text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto opacity-95">
+          <p className="font-sans text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto opacity-95 drop-shadow-lg">
             Alătură-te primului program de coaching one-to-many din România dedicat 
             <span className="font-accent font-semibold"> EXCLUSIV femeilor</span>, 
             unde te învăț cum să îți recuperezi controlul asupra corpului – folosind exact ceea ce 

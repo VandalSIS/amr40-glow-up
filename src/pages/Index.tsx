@@ -4,6 +4,7 @@ import IntroBanner from "@/components/IntroBanner";
 import AboutCoach from "@/components/AboutCoach";
 import PainPoints from "@/components/PainPoints";
 import Experience from "@/components/Experience";
+import Benefits from "@/components/Benefits";
 import Sponsors from "@/components/Sponsors";
 import AMRMethod from "@/components/AMRMethod";
 import Pricing from "@/components/Pricing";
@@ -19,8 +20,9 @@ const Index = () => {
       <AboutCoach />
       <PainPoints />
       <Experience />
-      <AMRMethod />
+      <Benefits />
       <Sponsors />
+      <AMRMethod />
       <Pricing />
       <FAQ />
       <Footer />

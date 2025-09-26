@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Calendar } from "lucide-react";
+import { MapPin, Mail, Phone, Calendar, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -78,25 +78,28 @@ const Footer = () => {
             </div>
             
             <div className="pt-4">
-              <p className="font-sans text-sm text-primary-foreground/60 mb-3">
-                Urmărește-ne pentru updates:
+              <p className="font-sans text-sm text-primary-foreground/80 mb-4 font-medium">
+                Urmărește-ne pentru updates și sfaturi zilnice:
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-4">
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center hover:bg-accent/30 transition-colors duration-300"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group border border-white/20"
                   aria-label="Facebook"
                 >
-                  📘
+                  <Facebook className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center hover:bg-accent/30 transition-colors duration-300"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group border border-white/20"
                   aria-label="Instagram"
                 >
-                  📷
+                  <Instagram className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
                 </a>
               </div>
+              <p className="font-sans text-xs text-primary-foreground/60 mt-3">
+                Conținut exclusiv pentru femeile 40+ • Sfaturi nutriționale • Antrenamente personalizate
+              </p>
             </div>
           </div>
         </div>
