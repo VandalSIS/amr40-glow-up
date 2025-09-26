@@ -79,15 +79,19 @@ const Benefits = () => {
         </div>
         
         <div className="text-center">
-          <div className="inline-block bg-gradient-secondary p-8 rounded-2xl shadow-soft mb-8">
-            <h3 className="font-serif text-2xl font-bold text-foreground mb-4">
-              Valoarea totală: peste 2.500€
-            </h3>
-            <p className="font-sans text-lg text-muted-foreground">
+          <div className="inline-block bg-gradient-secondary p-6 lg:p-8 rounded-2xl shadow-soft mb-6 lg:mb-8">
+            <div className="flex items-center justify-center gap-2 mb-3 lg:mb-4">
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+              <h3 className="font-serif text-xl lg:text-2xl font-bold text-foreground">
+                Valoarea totală: peste 2.500€
+              </h3>
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            </div>
+            <p className="font-sans text-base lg:text-lg text-muted-foreground">
               Investiția ta de astăzi pentru următorii 40 de ani
             </p>
           </div>
-          <Button size="lg" variant="premium" className="animate-scale-in">
+          <Button size="lg" variant="premium" className="animate-scale-in text-sm lg:text-base">
             Rezervă-ți transformarea acum
           </Button>
         </div>

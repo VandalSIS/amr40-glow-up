@@ -60,46 +60,48 @@ const Pricing = () => {
           </div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {pricingOptions.map((option, index) => (
             <div 
               key={index}
               className={`relative animate-scale-in bg-white rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 overflow-hidden ${
-                option.popular ? 'border-2 border-accent transform scale-105' : 'border border-border'
+                option.popular ? 'border-2 border-accent' : 'border border-border'
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {option.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="bg-accent text-accent-foreground px-6 py-2 rounded-full font-accent font-semibold text-sm">
-                    Cel mai popular
-                  </div>
-                </div>
-              )}
               
-              <div className="p-8">
+              <div className="p-6 lg:p-8">
                 <div className="text-center mb-6">
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-2">
+                  {option.popular && (
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                      <span className="font-accent text-sm font-medium text-accent">
+                        Cel mai ales
+                      </span>
+                      <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    </div>
+                  )}
+                  <h3 className="font-serif text-xl lg:text-2xl font-bold text-primary mb-2">
                     {option.type}
                   </h3>
                   <div className="mb-3">
-                    <span className="font-serif text-4xl font-bold text-foreground">
+                    <span className="font-serif text-3xl lg:text-4xl font-bold text-foreground">
                       {option.price}
                     </span>
-                    <span className="font-sans text-muted-foreground ml-1">
+                    <span className="font-sans text-muted-foreground ml-1 text-sm lg:text-base">
                       / persoană
                     </span>
                   </div>
-                  <p className="font-sans text-muted-foreground">
+                  <p className="font-sans text-muted-foreground text-sm lg:text-base">
                     {option.description}
                   </p>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 lg:space-y-3 mb-6 lg:mb-8">
                   {option.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="font-sans text-foreground">
+                      <Check className="h-4 w-4 lg:h-5 lg:w-5 text-accent mt-0.5 flex-shrink-0" />
+                      <span className="font-sans text-foreground text-sm lg:text-base">
                         {feature}
                       </span>
                     </li>
@@ -109,7 +111,7 @@ const Pricing = () => {
                 <Button 
                   size="lg" 
                   variant={option.popular ? "hero" : "outline"}
-                  className="w-full"
+                  className="w-full text-sm lg:text-base"
                 >
                   Rezervă {option.type}
                 </Button>
