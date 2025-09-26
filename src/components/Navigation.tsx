@@ -35,8 +35,8 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => scrollToSection('despre')}
               className="font-sans text-foreground hover:text-primary transition-colors"
@@ -61,10 +61,15 @@ const Navigation = () => {
             >
               Consultanță 1:1
             </button>
+          </div>
+
+          {/* Right side - Button */}
+          <div className="flex-shrink-0">
             <Button 
               onClick={() => scrollToSection('rezervare')}
               variant="hero"
               size="sm"
+              className="hidden md:block"
             >
               Rezervă acum
             </Button>
