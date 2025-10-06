@@ -35,8 +35,8 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          {/* Desktop Navigation - Left aligned */}
+          <div className="hidden md:flex items-center space-x-8 ml-8">
             <button
               onClick={() => scrollToSection('despre')}
               className="font-sans text-foreground hover:text-primary transition-colors"
@@ -65,14 +65,11 @@ const Navigation = () => {
 
           {/* Right side - Button */}
           <div className="flex-shrink-0">
-            <Button 
+            <div className="hidden md:flex justify-center items-center h-10 px-4 py-2 bg-accent text-accent-foreground hover:bg-accent/90 shadow-elegant hover:shadow-soft hover:-translate-y-2 text-lg font-semibold border-2 border-accent/20 hover:border-accent/40 rounded-xl font-accent font-medium transition-all duration-300 cursor-pointer"
               onClick={() => scrollToSection('rezervare')}
-              variant="hero"
-              size="sm"
-              className="hidden md:block"
             >
-              Rezervă acum
-            </Button>
+              <div className="text-center">Rezervă acum</div>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -115,14 +112,12 @@ const Navigation = () => {
                 Consultanță 1:1
               </button>
               <div className="px-3 py-2">
-                <Button 
-                  onClick={() => scrollToSection('rezervare')}
-                  variant="hero"
-                  size="sm"
-                  className="w-full"
-                >
-                  Rezervă acum
-                </Button>
+                 <div 
+                   onClick={() => scrollToSection('rezervare')}
+                   className="w-full h-10 px-4 py-2 bg-accent text-accent-foreground hover:bg-accent/90 shadow-elegant hover:shadow-soft hover:-translate-y-2 text-lg font-semibold border-2 border-accent/20 hover:border-accent/40 rounded-xl font-accent font-medium transition-all duration-300 flex justify-center items-center cursor-pointer"
+                 >
+                   <div className="text-center">Rezervă acum</div>
+                 </div>
               </div>
             </div>
           </div>
