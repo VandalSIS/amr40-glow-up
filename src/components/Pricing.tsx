@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
+import SimpleContactForm from "./SimpleContactForm";
 
 const Pricing = () => {
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleReservation = (optionType: string) => {
+    setSelectedOption(optionType);
+    setIsContactPopupOpen(true);
+  };
+
   const pricingOptions = [
     {
       type: "Cameră single",
@@ -112,6 +122,7 @@ const Pricing = () => {
                   size="lg" 
                   variant={option.popular ? "hero" : "outline"}
                   className="w-full text-sm lg:text-base"
+                  onClick={() => handleReservation(option.type)}
                 >
                   Rezervă {option.type}
                 </Button>
@@ -136,6 +147,13 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Popup */}
+      <SimpleContactForm 
+        isOpen={isContactPopupOpen}
+        onClose={() => setIsContactPopupOpen(false)}
+        title={`Rezervare ${selectedOption}`}
+      />
     </section>
   );
 };

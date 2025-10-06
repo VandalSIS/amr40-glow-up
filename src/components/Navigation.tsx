@@ -1,12 +1,22 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/iulia-popa-logo-horizontal.png";
 
-const Navigation = () => {
+interface NavigationProps {
+  onOpenContact: () => void;
+}
+
+const Navigation = ({ onOpenContact }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleContactClick = () => {
+    onOpenContact();
+    setIsMenuOpen(false); // Close mobile menu if open
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -32,9 +42,9 @@ const Navigation = () => {
               className="transition-opacity hover:opacity-80"
             >
               <img 
-                src="/photo_2025-10-06_21-28-30.jpg" 
-                alt="Iulia Popa" 
-                className="h-10 rounded-full object-cover"
+                src={logoImage} 
+                alt="Iulia Popa Logo" 
+                className="h-8"
               />
             </button>
           </div>
@@ -60,7 +70,7 @@ const Navigation = () => {
               FAQ
             </button>
             <button
-              onClick={() => scrollToSection('consultanta')}
+              onClick={handleContactClick}
               className="font-sans text-foreground hover:text-primary transition-colors"
             >
               Consultanță 1:1
@@ -110,7 +120,7 @@ const Navigation = () => {
                 FAQ
               </button>
               <button
-                onClick={() => scrollToSection('consultanta')}
+                onClick={handleContactClick}
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Consultanță 1:1
