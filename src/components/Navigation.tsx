@@ -29,9 +29,13 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="font-serif text-xl font-bold text-primary hover:text-primary-light transition-colors"
+              className="transition-opacity hover:opacity-80"
             >
-              Iulia Popa
+              <img 
+                src="/photo_2025-10-06_21-28-30.jpg" 
+                alt="Iulia Popa" 
+                className="h-10 rounded-full object-cover"
+              />
             </button>
           </div>
 
