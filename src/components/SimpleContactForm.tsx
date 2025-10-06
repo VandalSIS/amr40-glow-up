@@ -39,7 +39,7 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
         style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
       />
       
-      <div className="bg-white rounded-3xl p-8 w-full max-w-lg relative z-10 shadow-2xl border border-gray-100" style={{ position: 'relative', zIndex: 10, maxWidth: '32rem', width: '100%' }}>
+      <div className="bg-white rounded-3xl p-6 w-full max-w-md relative z-10 shadow-2xl border border-gray-100" style={{ position: 'relative', zIndex: 10, maxWidth: '28rem', width: '100%' }}>
         <button
           onClick={onClose}
           className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 hover:bg-gray-100 border border-gray-200 transition-all duration-200"
@@ -48,16 +48,16 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
           <X className="h-5 w-5 text-gray-600" />
         </button>
 
-        <div className="mb-8 text-center pr-12">
-          <h2 className="font-serif text-3xl font-bold text-primary mb-3">
+        <div className="mb-6 text-center pr-10">
+          <h2 className="font-serif text-2xl font-bold text-primary mb-2">
             {title}
           </h2>
-          <p className="font-sans text-gray-600 text-base leading-relaxed">
-            Completează formularul și te voi contacta în cel mai scurt timp pentru a discuta detaliile.
+          <p className="font-sans text-gray-600 text-sm leading-relaxed">
+            Completează formularul și te voi contacta în cel mai scurt timp.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
               Nume complet
@@ -106,11 +106,11 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
             />
           </div>
 
-          <div className="pt-6">
+          <div className="pt-4">
             <Button 
               type="submit" 
               variant="hero" 
-              className="w-full h-14 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full h-12 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               style={{ width: '100%' }}
             >
               Trimite cererea
@@ -118,9 +118,9 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
           </div>
         </form>
 
-        <div className="mt-6 pt-6 border-t border-gray-100">
-          <p className="text-sm text-gray-600 text-center leading-relaxed mb-2">
-            Prin trimiterea acestui formular, accepți să fii contactat(ă) de către echipa noastră pentru detalii despre program.
+        <div className="mt-4 pt-4 border-t border-gray-100">
+          <p className="text-xs text-gray-600 text-center leading-relaxed mb-1">
+            Prin trimiterea acestui formular, accepți să fii contactat(ă) pentru detalii despre program.
           </p>
           <p className="text-xs text-gray-500 text-center font-medium">
             🔒 Datele tale sunt protejate conform GDPR
