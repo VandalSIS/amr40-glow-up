@@ -11,37 +11,37 @@ const Experience = () => {
     {
       icon: Target,
       title: "Antrenamente inteligente și cu scop",
-      description: "Îți arată cum să scapi de grăsimea de pe burtă, să construiești mușchi pentru forță și independență și să stopezi osteoporoza care afectează 60% dintre femeile de peste 50 de ani.",
+      description: "…pentru că nu faci mișcare la întâmplare, ci un program gândit special pentru femei, adaptat vârstei, nivelului tău de fitness și obiectivelor tale – ca să arzi grăsimea abdominală, să construiești masă musculară și să îți protejezi oasele.",
       image: workoutImage,
     },
     {
       icon: Utensils,
       title: "Nutriție personalizată",
-      description: "Îndrumare practică despre ce, când și cum să mănânci pentru a susține inteligent această transformare. Fără înfometare, fără restricții absurde – doar soluții aplicabile în propria bucătărie.",
+      description: "…pentru că ai nevoie să știi clar ce, când și cum să mănânci ca să îți susții inteligent transformarea. Fără înfometare, fără restricții absurde – doar soluții simple, aplicabile imediat în propria bucătărie.",
       image: nutritionImage,
     },
     {
       icon: Heart,
       title: "Fiziologia unică a femeii",
-      description: "Explicată simplu, fără termeni complicați: cum funcționam înainte de 40 de ani și ce se schimbă după.",
+      description: "…pentru că doar dacă înțelegi ce se schimbă în corpul tău după 35 de ani vei putea să susții schimbările necesare în stilul de viață, ca să combați pierderea masei musculare, densității osoase și acumularea de grăsime în jurul taliei.",
       image: physiologyImage,
     },
     {
       icon: BookOpen,
       title: "Workshopuri educaționale",
-      description: "Sesiuni zilnice care simplifică teme complexe în lecții clare și aplicabile imediat.",
+      description: "…pentru că este nevoie să știi și să înțelegi, într-un limbaj simplu și nemedical, ce se întâmplă în corpul tău după 35 de ani – ca să transformi informațiile în lecții clare și aplicabile imediat pentru alimentație, antrenament și recuperare.",
       image: workshopImage,
     },
     {
       icon: Star,
       title: "Cazare 5 stele",
-      description: "Confort premium, într-un cadru luxos care îți susține transformarea.",
+      description: "…pentru că transformarea are nevoie de un cadru pe măsură. Stai într-o locație exclusivistă, cu camere elegante, spa, saună și ciubăr, unde confortul premium și liniștea naturii se îmbină perfect pentru a-ți susține energia și echilibrul.",
       image: accommodationImage,
     },
     {
       icon: Users,
-      title: "Atmosferă intimă și exclusivă",
-      description: "Limitat la 20 de participante, pentru atenție personală și conexiune autentică.",
+      title: "Spațiu exclusiv pentru transformare",
+      description: "…pentru că doar rupându-te de agitația și responsabilitățile zilnice îți poți muta atenția spre tine. În acest cadru restrâns, cu doar 20 de participante, primești atenția personală și liniștea necesară ca să înveți, să integrezi și să te reconectezi cu propriul corp.",
       image: atmosphereImage,
     },
   ];
@@ -78,10 +78,10 @@ const Experience = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-accent font-bold text-lg text-foreground mb-3">
+                <h3 className="font-accent font-bold text-base text-foreground mb-2">
                   {component.title}
                 </h3>
-                <p className="font-sans text-muted-foreground leading-relaxed">
+                <p className="font-sans text-sm text-muted-foreground leading-snug">
                   {component.description}
                 </p>
               </div>

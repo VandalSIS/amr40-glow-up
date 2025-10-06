@@ -6,8 +6,8 @@ const AMRMethod = () => {
       icon: Dumbbell,
       letter: "A",
       title: "Antrenament",
-      subtitle: "Inteligent și adaptat",
-      description: "Antrenamentul nu este opțional, este esențial pentru sănătate și longevitate. Abordarea prin metoda A.M.R. îți oferă claritate și rezultate imediate.",
+      subtitle: "Inteligent și cu scop",
+      description: "Antrenamentul nu este opțional, este esențial pentru sănătate și longevitate. Abordarea prin metoda A.M.R. îți oferă claritate despre Cum, Cât și Când să te antrenezi.",
       benefits: []
     },
     {
@@ -15,7 +15,7 @@ const AMRMethod = () => {
       letter: "M",
       title: "Mâncare",
       subtitle: "Nutriție personalizată",
-      description: "Viața înseamnă consum de energie. Orice facem și gândim se face prin consum de energie. Și SINGURA sursă de energie este mâncarea pe care o mâncăm și apa pe care o bem. Astfel, putem spune foarte sigur că: Ce, cum, cât și când mâncăm ne influențează întreaga existență. Dupa 40 de ani nevoile alimentare ale femeii sunt diferite, iar Metoda A.M.R. 40+ asta rezolva.",
+      description: "Tot ce faci și gândești consumă energie, iar singura sursă de energie este mâncarea pe care o mâncăm. De aceea, ce, cum, cât și când mănânci îți influențează direct viața.",
       benefits: []
     },
     {
@@ -33,7 +33,7 @@ const AMRMethod = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Metoda A.M.R. 40+
+            Metoda A.M.R. 35+
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
             O abordare inteligentă și cu scop, dovedită de știință și experiență, pentru combaterea și prevenirea principalelor 3 consecințe ale diminuării principalilor hormonilor feminini la peri & postmenopauză:

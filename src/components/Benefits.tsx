@@ -13,23 +13,18 @@ const Benefits = () => {
       description: ""
     },
     {
-      icon: Video,
-      title: "O metodă de ANTRENAMENT care construiește mușchi, arde grăsimi și întărește oasele",
-      description: ""
-    },
-    {
       icon: Utensils,
-      title: "Reguli simple de alimentație care îți schimbă viața și viziunea asupra mâncării și care îți susțin mușchii și arderea grăsimilor",
+      title: "Reguli simple de alimentație care îți schimbă relația cu mâncarea",
       description: ""
     },
     {
-      icon: FileText,
-      title: "Rețete și meniuri adaptate nevoilor tale, simplu de preparat acasă",
+      icon: Video,
+      title: "ANTRENAMENT care construiește mușchi, arde grăsimi și întărește oasele",
       description: ""
     },
     {
       icon: Clock,
-      title: "Liste de cumpărături clare: ce produse să alegi, de unde și ce să ai mereu în frigider",
+      title: "Liste de cumpărături clare: ce să alegi, de unde și ce să ai mereu în frigider",
       description: ""
     },
     {
@@ -39,7 +34,7 @@ const Benefits = () => {
     },
     {
       icon: FileText,
-      title: "Un rezumat practic cu tips & tricks, pe care îl poți lipi pe frigider pentru aplicare imediată",
+      title: "Un rezumat practic cu tips & tricks, în lipești pe frigider pentru aplicare imediată",
       description: ""
     }
   ];
