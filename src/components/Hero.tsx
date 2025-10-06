@@ -3,6 +3,13 @@ import heroImage from "@/assets/hero-wellness-women.jpg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image with Dark Overlay */}
@@ -43,7 +50,12 @@ const Hero = () => {
             </div>
           </div>
           
-          <Button size="lg" variant="hero" className="animate-scale-in">
+          <Button 
+            size="lg" 
+            variant="hero" 
+            className="animate-scale-in"
+            onClick={() => scrollToSection('rezervare')}
+          >
             Rezervă-ți locul acum
           </Button>
         </div>

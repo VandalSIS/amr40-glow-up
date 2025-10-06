@@ -35,35 +35,35 @@ const AboutCoach = () => {
           </div>
           
           <div className="order-1 lg:order-2 animate-fade-in">
-            <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-4 lg:mb-6">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4 lg:mb-6">
               Iulia Popa
             </h3>
-            <p className="font-accent text-base lg:text-lg font-semibold text-primary-light mb-4 lg:mb-6">
+            <p className="font-accent text-lg lg:text-xl font-semibold text-primary-light mb-4 lg:mb-6">
               Menopause Coach & Fitness Specialist
             </p>
             
             <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <p className="font-sans text-foreground text-sm lg:text-base">
+                <p className="font-sans text-foreground text-base lg:text-lg">
                   <strong>Peste 20 de ani experiență</strong> în fitness și nutriție, fostă atletă de performanță
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <p className="font-sans text-foreground text-sm lg:text-base">
+                <p className="font-sans text-foreground text-base lg:text-lg">
                   <strong>Licențiată în Management</strong>, Master în Nutriție și PR
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <p className="font-sans text-foreground text-sm lg:text-base">
+                <p className="font-sans text-foreground text-base lg:text-lg">
                   <strong>Antrenor personal certificat</strong>, cu multiple specializări, inclusiv Menopause Coaching Specialist
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                <p className="font-sans text-foreground text-sm lg:text-base">
+                <p className="font-sans text-foreground text-base lg:text-lg">
                   <strong>Manager de Fitness</strong> și formator a peste 500 de antrenori personali
                 </p>
               </div>

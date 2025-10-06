@@ -1,8 +1,8 @@
 import { Target, Utensils, Heart, BookOpen, Star, Users } from "lucide-react";
-import workoutImage from "@/assets/a-lifestyle-advertisement-featuring-a-co_obg-5ApAQlC_Mh-Le6Btow_ewUDtxURSvyWFZE0e4a32A.jpeg";
-import nutritionImage from "@/assets/a-photograph-of-a-vibrant-caesar-salad-p_Ievn_zxJS2CEWSqivkHcXA_Z8PLVjdfSaK0-eKednC8-g.jpeg";
-import physiologyImage from "@/assets/JdQS5e9zivePKYOMffl1AiD5qVCA95YdfbELj1jE.jpg";
-import workshopImage from "@/assets/a-photograph-of-a-strong-woman-mid-exerc_oT35sv77QbqvJQca93rfoA_x_lgRgjnRzmpagG68igCYQ.jpeg";
+import workoutImage from "@/assets/iulia-training-photo.jpg";
+import nutritionImage from "@/assets/mancare.jpg";
+import physiologyImage from "@/assets/fiziologia.jpg";
+import workshopImage from "@/assets/workshop.jpg";
 import accommodationImage from "@/assets/5-Star-Accomodation-1-scaled.jpg";
 import atmosphereImage from "@/assets/a-serene-lifestyle-advertisement-promoti_ykK-OdfPSMGjx0MvscVCQA_02LLfFT_SU-1zkJGh1j8fw.jpeg";
 
@@ -13,36 +13,42 @@ const Experience = () => {
       title: "Antrenamente inteligente și cu scop",
       description: "…pentru că nu faci mișcare la întâmplare, ci un program gândit special pentru femei, adaptat vârstei, nivelului tău de fitness și obiectivelor tale – ca să arzi grăsimea abdominală, să construiești masă musculară și să îți protejezi oasele.",
       image: workoutImage,
+      imagePosition: "center center",
     },
     {
       icon: Utensils,
       title: "Nutriție personalizată",
       description: "…pentru că ai nevoie să știi clar ce, când și cum să mănânci ca să îți susții inteligent transformarea. Fără înfometare, fără restricții absurde – doar soluții simple, aplicabile imediat în propria bucătărie.",
       image: nutritionImage,
+      imagePosition: "center center",
     },
     {
       icon: Heart,
       title: "Fiziologia unică a femeii",
       description: "…pentru că doar dacă înțelegi ce se schimbă în corpul tău după 35 de ani vei putea să susții schimbările necesare în stilul de viață, ca să combați pierderea masei musculare, densității osoase și acumularea de grăsime în jurul taliei.",
       image: physiologyImage,
+      imagePosition: "center 30%",
     },
     {
       icon: BookOpen,
       title: "Workshopuri educaționale",
       description: "…pentru că este nevoie să știi și să înțelegi, într-un limbaj simplu și nemedical, ce se întâmplă în corpul tău după 35 de ani – ca să transformi informațiile în lecții clare și aplicabile imediat pentru alimentație, antrenament și recuperare.",
       image: workshopImage,
+      imagePosition: "center 20%",
     },
     {
       icon: Star,
       title: "Cazare 5 stele",
       description: "…pentru că transformarea are nevoie de un cadru pe măsură. Stai într-o locație exclusivistă, cu camere elegante, spa, saună și ciubăr, unde confortul premium și liniștea naturii se îmbină perfect pentru a-ți susține energia și echilibrul.",
       image: accommodationImage,
+      imagePosition: "center center",
     },
     {
       icon: Users,
       title: "Spațiu exclusiv pentru transformare",
       description: "…pentru că doar rupându-te de agitația și responsabilitățile zilnice îți poți muta atenția spre tine. În acest cadru restrâns, cu doar 20 de participante, primești atenția personală și liniștea necesară ca să înveți, să integrezi și să te reconectezi cu propriul corp.",
       image: atmosphereImage,
+      imagePosition: "center center",
     },
   ];
 
@@ -65,11 +71,12 @@ const Experience = () => {
               className="group animate-scale-in bg-white rounded-2xl shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-3 border border-border overflow-hidden"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img 
                   src={component.image} 
                   alt={component.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  style={{ objectPosition: component.imagePosition }}
                 />
                 <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
