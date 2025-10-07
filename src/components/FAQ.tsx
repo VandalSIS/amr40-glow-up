@@ -53,7 +53,7 @@ const FAQ = () => {
             Întrebări Frecvente
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            Răspunsuri la cele mai comune întrebări despre programul AMR 40+
+            Răspunsuri la cele mai comune întrebări despre programul AMR 35+
           </p>
         </div>
         
@@ -82,7 +82,7 @@ const FAQ = () => {
             Nu îți găsești răspunsul la întrebare?
           </p>
           <a 
-            href="mailto:contact@amr40plus.ro" 
+            href="mailto:contact@popaiulia.com" 
             className="font-accent font-semibold text-primary hover:text-primary-light transition-colors duration-300"
           >
             Contactează-ne direct →

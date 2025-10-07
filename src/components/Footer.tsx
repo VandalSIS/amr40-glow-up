@@ -10,10 +10,10 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <h3 className="font-serif text-2xl font-bold mb-4">
-                Metoda A.M.R. 40+
+                Metoda A.M.R. 35+
               </h3>
               <p className="font-sans text-primary-foreground/80 leading-relaxed">
-                Programul de coaching dedicat femeilor 40+ pentru recuperarea controlului 
+                Programul de coaching dedicat femeilor 35+ pentru recuperarea controlului 
                 asupra corpului prin antrenament, nutriție și recuperare.
               </p>
             </div>
@@ -60,10 +60,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent" />
                 <a 
-                  href="mailto:contact@amr40plus.ro" 
+                  href="mailto:contact@popaiulia.com" 
                   className="font-sans text-primary-foreground/80 hover:text-accent transition-colors duration-300"
                 >
-                  contact@amr40plus.ro
+                  contact@popaiulia.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ const Footer = () => {
                 </a>
               </div>
               <p className="font-sans text-xs text-primary-foreground/60 mt-3">
-                Conținut exclusiv pentru femeile 40+ • Sfaturi nutriționale • Antrenamente personalizate
+                Conținut exclusiv pentru femeile 35+ • Sfaturi nutriționale • Antrenamente personalizate
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="font-sans text-sm text-primary-foreground/60">
-              © 2025 Metoda AMR 40+ by Iulia Popa. Toate drepturile rezervate.
+              © 2025 Metoda AMR 35+ by Iulia Popa. Toate drepturile rezervate.
             </p>
           </div>
         </div>

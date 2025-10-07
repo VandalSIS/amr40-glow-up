@@ -72,7 +72,7 @@ const AboutCoach = () => {
             <div className="relative bg-white p-4 lg:p-6 rounded-xl shadow-card">
               <Quote className="h-6 w-6 lg:h-8 lg:w-8 text-secondary mb-3 lg:mb-4" />
               <blockquote className="font-sans text-foreground italic leading-relaxed text-sm lg:text-base">
-                "Vreau să schimb conversația despre fitness și nutriție pentru femei, să te ajut să preiei controlul asupra vieții tale, atunci când hormonii tăi, vor altceva. Pentru că femeile sunt diferite de bărbați și pentru că după 40 de ani, când toți din jurul tău îți spun să o lași mai moale… că e cazul să te uiți în buletin… noi, femeile, de fapt trebuie să sprintăm. Pentru că putem!"
+                "Vreau să schimb conversația despre fitness și nutriție pentru femei, să te ajut să preiei controlul asupra vieții tale, atunci când hormonii tăi, vor altceva. Pentru că femeile sunt diferite de bărbați și pentru că după 35 de ani, când toți din jurul tău îți spun să o lași mai moale… că e cazul să te uiți în buletin… noi, femeile, de fapt trebuie să sprintăm. Pentru că putem!"
               </blockquote>
               <cite className="font-accent font-semibold text-primary mt-3 lg:mt-4 block text-sm lg:text-base">
                 — Iulia Popa

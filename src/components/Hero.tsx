@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Wellness pentru femei - Metoda AMR 40+"
+          alt="Wellness pentru femei - Metoda AMR 35+"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center center' }}
         />
@@ -27,12 +27,12 @@ const Hero = () => {
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 drop-shadow-2xl">
-            Te invit să trăiești 4 zile care îți pot schimba următorii 40 de ani!
+            Te invit să trăiești 4 zile care îți pot schimba următorii 35 de ani!
           </h1>
           
           <div className="mb-8">
             <h2 className="font-accent text-2xl sm:text-3xl font-bold mb-4 text-accent">
-              Metoda A.M.R. 40+ by Iulia Popa
+              Metoda A.M.R. 35+ by Iulia Popa
             </h2>
             <p className="font-accent text-lg sm:text-xl tracking-wide">
               Antrenament • Mâncare • Recuperare

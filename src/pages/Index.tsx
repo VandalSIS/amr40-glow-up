@@ -5,6 +5,7 @@ import IntroBanner from "@/components/IntroBanner";
 import AboutCoach from "@/components/AboutCoach";
 import PainPoints from "@/components/PainPoints";
 import Experience from "@/components/Experience";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import Benefits from "@/components/Benefits";
 import Sponsors from "@/components/Sponsors";
 import AMRMethod from "@/components/AMRMethod";
@@ -24,6 +25,7 @@ const Index = () => {
       <AboutCoach />
       <PainPoints />
       <Experience />
+      <PhotoCarousel />
       <Benefits />
       <Sponsors />
       <AMRMethod />

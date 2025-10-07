@@ -92,7 +92,7 @@ const AMRMethod = () => {
             </h3>
             <p className="font-sans text-lg text-muted-foreground leading-relaxed">
               Pentru că nu tratează simptomele, ci cauza. Nu îți oferă soluții temporare, 
-              ci îți creează un sistem sustenabil adaptat nevoilor specifice ale corpului tău după 40 de ani. 
+              ci îți creează un sistem sustenabil adaptat nevoilor specifice ale corpului tău după 35 de ani. 
               Când toate cele trei componente lucrează împreună, transformarea este inevitabilă.
             </p>
           </div>
