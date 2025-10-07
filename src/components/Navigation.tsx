@@ -44,7 +44,7 @@ const Navigation = ({ onOpenContact }: NavigationProps) => {
               <img 
                 src={logoImage} 
                 alt="Iulia Popa Logo" 
-                className="h-32 md:h-40 mt-2"
+                className="h-28 md:h-40 mt-2"
               />
             </button>
           </div>
