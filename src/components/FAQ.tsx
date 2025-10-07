@@ -76,18 +76,6 @@ const FAQ = () => {
             ))}
           </Accordion>
         </div>
-        
-        <div className="text-center mt-12">
-          <p className="font-sans text-muted-foreground mb-4">
-            Nu îți găsești răspunsul la întrebare?
-          </p>
-          <a 
-            href="mailto:contact@popaiulia.com" 
-            className="font-accent font-semibold text-primary hover:text-primary-light transition-colors duration-300"
-          >
-            Contactează-ne direct →
-          </a>
-        </div>
       </div>
     </section>
   );
