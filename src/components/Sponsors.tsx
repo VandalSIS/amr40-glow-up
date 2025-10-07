@@ -1,7 +1,7 @@
 import inBodyLogo from "@/assets/inbody-logo.jpg";
 import proNutritionLogo from "@/assets/pro-nutrition-logo.jpg";
 import caffeCostadoroLogo from "@/assets/caffe-costadoro-logo.jpg";
-import screenshot1 from "@/assets/Screenshot_7-10-2025_16819_.jpeg";
+import ginsima from "@/assets/ginsima.png";
 import screenshot2 from "@/assets/Screenshot_7-10-2025_161025_.jpeg";
 
 const Sponsors = () => {
@@ -16,7 +16,7 @@ const Sponsors = () => {
       logo: caffeCostadoroLogo,
     },
     {
-      logo: screenshot1,
+      logo: ginsima,
     },
     {
       logo: screenshot2,
