@@ -2,6 +2,13 @@ import { MapPin, Mail, Phone, Calendar, Facebook, Instagram } from "lucide-react
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-16">
@@ -18,7 +25,11 @@ const Footer = () => {
               </p>
             </div>
             <div className="pt-4">
-              <Button variant="secondary" size="lg">
+              <Button 
+                variant="secondary" 
+                size="lg"
+                onClick={() => scrollToSection('rezervare')}
+              >
                 Rezervă-ți locul acum
               </Button>
             </div>
@@ -33,7 +44,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Calendar className="h-5 w-5 text-accent mt-1" />
                 <div>
-                  <p className="font-accent font-semibold">16–19 octombrie 2025</p>
+                  <p className="font-accent font-semibold">06–09 noiembrie 2025</p>
                   <p className="font-sans text-sm text-primary-foreground/70">
                     4 zile intensive de transformare
                   </p>
@@ -83,14 +94,18 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/iulia__popa?igsh=NnduZjdkNWpoa3lj&utm_source=qr" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group border border-white/20"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/iulia__popa?igsh=NnduZjdkNWpoa3lj&utm_source=qr" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group border border-white/20"
                   aria-label="Instagram"
                 >
@@ -106,21 +121,7 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-              <a 
-                href="/termeni-conditii" 
-                className="font-sans text-sm text-primary-foreground/70 hover:text-accent transition-colors duration-300"
-              >
-                Termeni și Condiții
-              </a>
-              <a 
-                href="/privacy-policy" 
-                className="font-sans text-sm text-primary-foreground/70 hover:text-accent transition-colors duration-300"
-              >
-                Politică de Confidențialitate
-              </a>
-            </div>
+          <div className="text-center">
             <p className="font-sans text-sm text-primary-foreground/60">
               © 2025 Metoda AMR 35+ by Iulia Popa. Toate drepturile rezervate.
             </p>

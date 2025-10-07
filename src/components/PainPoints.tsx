@@ -1,6 +1,14 @@
 import { Dumbbell, Scale, Battery, Repeat, HelpCircle, Users, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const PainPoints = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const painPoints = [
     {
       icon: Dumbbell,
@@ -75,15 +83,16 @@ const PainPoints = () => {
         </div>
         
         <div className="text-center mt-12">
-          <div className="inline-block bg-gradient-secondary p-6 rounded-2xl shadow-soft">
-            <div className="flex items-center justify-center gap-3">
-              <Star className="h-6 w-6 text-primary" />
-              <p className="font-accent text-lg font-semibold text-foreground">
-                Dacă te regăsești în aceste situații, ești în locul potrivit
-              </p>
-              <Star className="h-6 w-6 text-primary" />
-            </div>
-          </div>
+          <p className="font-accent text-2xl font-semibold text-foreground mb-6">
+            Dacă te regăsești în aceste situații, ești în locul potrivit
+          </p>
+          <Button 
+            size="lg" 
+            variant="hero"
+            onClick={() => scrollToSection('rezervare')}
+          >
+            Rezervă acum
+          </Button>
         </div>
       </div>
     </section>

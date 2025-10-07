@@ -57,7 +57,7 @@ const Pricing = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-foreground">
               <Calendar className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">16–19 octombrie 2025</span>
+              <span className="font-accent font-medium">06–09 noiembrie 2025</span>
             </div>
             <div className="flex items-center gap-2 text-foreground">
               <MapPin className="h-5 w-5 text-accent" />
