@@ -1,42 +1,42 @@
-import { AlertCircle, TrendingDown, Zap, RotateCcw, Star } from "lucide-react";
+import { Dumbbell, Scale, Battery, Repeat, HelpCircle, Users, Star } from "lucide-react";
 
 const PainPoints = () => {
   const painPoints = [
     {
-      icon: TrendingDown,
+      icon: Dumbbell,
       title: "Te antrenezi din ce în ce mai mult, dar mușchii refuză să se arate?",
       description: "",
       color: "text-primary"
     },
     {
-      icon: AlertCircle,
+      icon: Scale,
       title: "Mănânci din ce în ce mai puțin, dar cântarul refuză să arate mai putine kilograme?",
       description: "",
-      color: "text-destructive"
+      color: "text-primary"
     },
     {
-      icon: Zap,
+      icon: Battery,
       title: "Te simți permanent obosită, anxioasă sau parcă nu mai ești tu însăți?",
       description: "",
-      color: "text-accent"
+      color: "text-primary"
     },
     {
-      icon: RotateCcw,
+      icon: Repeat,
       title: "Ai impresia că ești un \"hamster\" într-o rotiță care tot aleargă și nu ajunge nicăieri?",
       description: "",
-      color: "text-secondary-foreground"
+      color: "text-primary"
     },
     {
-      icon: Star,
+      icon: HelpCircle,
       title: "Ai încercat totul și parcă nimic nu funcționează?",
       description: "",
       color: "text-primary"
     },
     {
-      icon: AlertCircle,
+      icon: Users,
       title: "Te simți singură, pierdută într-o mare de sfaturi contradictorii?",
       description: "",
-      color: "text-destructive"
+      color: "text-primary"
     }
   ];
 
@@ -62,7 +62,7 @@ const PainPoints = () => {
             >
               <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-xl bg-section-bg group-hover:bg-primary/10 transition-colors duration-300`}>
-                  <point.icon className={`h-5 w-5 ${point.color}`} />
+                  <point.icon className={`h-7 w-7 ${point.color}`} />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-accent font-semibold text-base text-foreground leading-relaxed">

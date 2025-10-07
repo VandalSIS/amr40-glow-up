@@ -42,7 +42,7 @@ const PhotoCarousel = () => {
               <img
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt}
-                className="w-full h-auto max-h-[60vh] object-contain transition-opacity duration-500"
+                className="w-full h-auto max-h-[75vh] object-contain transition-opacity duration-500"
               />
               
               {/* Gradient Overlay */}

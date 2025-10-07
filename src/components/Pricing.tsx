@@ -82,15 +82,6 @@ const Pricing = () => {
               
               <div className="p-6 lg:p-8">
                 <div className="text-center mb-6">
-                  {option.popular && (
-                    <div className="inline-flex items-center gap-2 mb-4">
-                      <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                      <span className="font-accent text-sm font-medium text-accent">
-                        Cel mai ales
-                      </span>
-                      <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                    </div>
-                  )}
                   <h3 className="font-serif text-xl lg:text-2xl font-bold text-primary mb-2">
                     {option.type}
                   </h3>
@@ -134,11 +125,9 @@ const Pricing = () => {
         <div className="text-center mt-16">
           <div className="inline-block bg-gradient-primary p-6 rounded-2xl shadow-elegant text-white max-w-2xl">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <AlertTriangle className="h-6 w-6 text-accent" />
               <h3 className="font-serif text-xl font-bold">
                 Locuri Limitate
               </h3>
-              <AlertTriangle className="h-6 w-6 text-accent" />
             </div>
             <p className="font-sans leading-relaxed">
               Pentru a asigura atenția personalizată și calitatea experienței, 

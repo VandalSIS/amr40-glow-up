@@ -1,23 +1,25 @@
 import inBodyLogo from "@/assets/inbody-logo.jpg";
 import proNutritionLogo from "@/assets/pro-nutrition-logo.jpg";
 import caffeCostadoroLogo from "@/assets/caffe-costadoro-logo.jpg";
+import screenshot1 from "@/assets/Screenshot_7-10-2025_16819_.jpeg";
+import screenshot2 from "@/assets/Screenshot_7-10-2025_161025_.jpeg";
 
 const Sponsors = () => {
   const sponsors = [
     {
-      name: "InBody",
       logo: inBodyLogo,
-      description: "Analiză corporală avansată"
     },
     {
-      name: "Pro Nutrition",
       logo: proNutritionLogo,
-      description: "Suplimente de calitate premium"
     },
     {
-      name: "Caffè Costadoro",
       logo: caffeCostadoroLogo,
-      description: "Cafea autentică italienească"
+    },
+    {
+      logo: screenshot1,
+    },
+    {
+      logo: screenshot2,
     }
   ];
 
@@ -33,26 +35,20 @@ const Sponsors = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           {sponsors.map((sponsor, index) => (
             <div 
               key={index}
               className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="mb-4 bg-white rounded-xl p-4 mx-auto w-fit">
+              <div className="bg-white rounded-xl p-4 mx-auto w-fit">
                 <img 
                   src={sponsor.logo} 
-                  alt={`Logo ${sponsor.name}`}
+                  alt={`Partener ${index + 1}`}
                   className="h-16 w-auto object-contain mx-auto"
                 />
               </div>
-              <h3 className="font-accent font-bold text-lg text-foreground mb-2">
-                {sponsor.name}
-              </h3>
-              <p className="font-sans text-sm text-muted-foreground">
-                {sponsor.description}
-              </p>
             </div>
           ))}
         </div>
