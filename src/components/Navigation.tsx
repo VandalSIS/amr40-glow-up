@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/ChatGPT Image Oct 7, 2025, 07_11_32 PM.png";
+import logoImage from "@/assets/logo-new.png";
 
 interface NavigationProps {
   onOpenContact: () => void;
@@ -32,9 +32,9 @@ const Navigation = ({ onOpenContact }: NavigationProps) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border" style={{boxShadow: '0 4px 20px rgba(0, 0, 0, 0.7)'}}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
@@ -44,13 +44,13 @@ const Navigation = ({ onOpenContact }: NavigationProps) => {
               <img 
                 src={logoImage} 
                 alt="Iulia Popa Logo" 
-                className="h-32"
+                className="h-40 mt-2"
               />
             </button>
           </div>
 
-          {/* Desktop Navigation - Left aligned */}
-          <div className="hidden md:flex items-center space-x-8 ml-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => scrollToSection('despre')}
               className="font-sans text-foreground hover:text-primary transition-colors"

@@ -27,14 +27,14 @@ const Experience = () => {
     {
       icon: Heart,
       title: "Fiziologia unică a femeii",
-      description: "…pentru că doar dacă înțelegi ce se schimbă în corpul tău după 35 de ani vei putea să susții schimbările necesare în stilul de viață, ca să combați pierderea masei musculare, densității osoase și acumularea de grăsime în jurul taliei.",
+      description: "…pentru că doar dacă înțelegi ce se schimbă în corpul tău după 40 de ani vei putea să susții schimbările necesare în stilul de viață, ca să combați pierderea masei musculare, densității osoase și acumularea de grăsime în jurul taliei.",
       image: physiologyImage,
       imagePosition: "center 30%",
     },
     {
       icon: BookOpen,
       title: "Workshopuri educaționale",
-      description: "…pentru că este nevoie să știi și să înțelegi, într-un limbaj simplu și nemedical, ce se întâmplă în corpul tău după 35 de ani – ca să transformi informațiile în lecții clare și aplicabile imediat pentru alimentație, antrenament și recuperare.",
+      description: "…pentru că este nevoie să știi și să înțelegi, într-un limbaj simplu și nemedical, ce se întâmplă în corpul tău după 40 de ani – ca să transformi informațiile în lecții clare și aplicabile imediat pentru alimentație, antrenament și recuperare.",
       image: workshopImage,
       imagePosition: "center 20%",
     },

@@ -7,7 +7,7 @@ const IntroBanner = () => {
             Alătură-te primului program de coaching one-to-many din România dedicat 
             <span className="font-bold"> EXCLUSIV femeilor</span>, 
             unde te învăț cum să îți recuperezi controlul asupra corpului – folosind exact ceea ce 
-            funcționează <span className="font-bold">DUPĂ vârsta de 35</span>.
+            funcționează <span className="font-bold">DUPĂ vârsta de 40</span>.
           </p>
         </div>
       </div>

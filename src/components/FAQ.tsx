@@ -53,7 +53,7 @@ const FAQ = () => {
             Întrebări Frecvente
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            Răspunsuri la cele mai comune întrebări despre programul AMR 35+
+            Răspunsuri la cele mai comune întrebări despre programul AMR 40+
           </p>
         </div>
         

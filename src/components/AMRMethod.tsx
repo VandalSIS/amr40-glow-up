@@ -33,7 +33,7 @@ const AMRMethod = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Metoda A.M.R. 35+
+            Metoda A.M.R. 40+
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
             O abordare inteligentă și cu scop, dovedită de știință și experiență, pentru combaterea și prevenirea principalelor 3 consecințe ale diminuării principalilor hormonilor feminini la peri & postmenopauză:
@@ -92,7 +92,7 @@ const AMRMethod = () => {
             </h3>
             <p className="font-sans text-lg text-muted-foreground leading-relaxed">
               Pentru că nu tratează simptomele, ci cauza. Nu îți oferă soluții temporare, 
-              ci îți creează un sistem sustenabil adaptat nevoilor specifice ale corpului tău după 35 de ani. 
+              ci îți creează un sistem sustenabil adaptat nevoilor specifice ale corpului tău după 40 de ani. 
               Când toate cele trei componente lucrează împreună, transformarea este inevitabilă.
             </p>
           </div>

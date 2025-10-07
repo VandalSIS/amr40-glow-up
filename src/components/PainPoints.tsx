@@ -56,7 +56,7 @@ const PainPoints = () => {
             Ești și tu aici, la fel ca milioane de femei din întreaga lume?
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            Aceste provocări sunt reale și comune pentru femeile de peste 35 de ani. 
+            Aceste provocări sunt reale și comune pentru femeile de peste 40 de ani. 
             Nu ești singura și, mai important, există soluții.
           </p>
         </div>
