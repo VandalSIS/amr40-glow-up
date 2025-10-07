@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
           
           <div className="mb-8">
-            <h2 className="font-accent text-2xl sm:text-3xl font-bold mb-4 text-accent">
+            <h2 className="font-accent text-2xl sm:text-3xl font-bold mb-4 text-accent whitespace-nowrap">
               Metoda A.M.R. 35+ by Iulia Popa
             </h2>
             <p className="font-accent text-lg sm:text-xl tracking-wide">

@@ -3,6 +3,7 @@ import proNutritionLogo from "@/assets/pro-nutrition-logo.jpg";
 import caffeCostadoroLogo from "@/assets/caffe-costadoro-logo.jpg";
 import ginsima from "@/assets/ginsima.png";
 import screenshot2 from "@/assets/Screenshot_7-10-2025_161025_.jpeg";
+import obioLogo from "@/assets/LOGO_Obio(RGB)-01.png";
 
 const Sponsors = () => {
   const sponsors = [
@@ -20,6 +21,9 @@ const Sponsors = () => {
     },
     {
       logo: screenshot2,
+    },
+    {
+      logo: obioLogo,
     }
   ];
 
@@ -35,7 +39,7 @@ const Sponsors = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {sponsors.map((sponsor, index) => (
             <div 
               key={index}

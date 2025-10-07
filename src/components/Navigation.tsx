@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logoImage from "@/assets/ChatGPT_Image_Oct_6__2025__09_27_48_PM-removebg-preview.png";
+import logoImage from "@/assets/ChatGPT Image Oct 7, 2025, 07_11_32 PM.png";
 
 interface NavigationProps {
   onOpenContact: () => void;
@@ -44,7 +44,7 @@ const Navigation = ({ onOpenContact }: NavigationProps) => {
               <img 
                 src={logoImage} 
                 alt="Iulia Popa Logo" 
-                className="h-24"
+                className="h-32"
               />
             </button>
           </div>
