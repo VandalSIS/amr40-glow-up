@@ -16,7 +16,7 @@
 //    
 //    TEMPLATE 2 - Email automat de mulțumire pentru client:
 //    - To Email: {{from_email}} (important!)
-//    - Subject: Mulțumim pentru interesul acordat - Metoda AMR 40+
+//    - Subject: Mulțumim pentru interesul acordat - Metoda AMR 35+
 //    - Variables: {{from_name}}
 //
 // 4. Get your Public Key:
@@ -46,6 +46,6 @@ Mesaj:
 {{message}}
 
 ---
-Acest mesaj a fost trimis de pe site-ul Metoda AMR 40+
+Acest mesaj a fost trimis de pe site-ul Metoda AMR 35+
 */
 

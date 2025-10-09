@@ -33,7 +33,7 @@ Cerere nouă de contact - {{from_name}}
 
 **Content (Conținut):**
 ```
-Ai primit o nouă cerere de contact de pe site-ul Metoda AMR 40+:
+Ai primit o nouă cerere de contact de pe site-ul Metoda AMR 35+:
 
 Nume: {{from_name}}
 Email: {{from_email}}
@@ -43,7 +43,7 @@ Detalii:
 {{message}}
 
 ---
-Acest mesaj a fost trimis automat de pe site-ul Metoda AMR 40+
+Acest mesaj a fost trimis automat de pe site-ul Metoda AMR 35+
 ```
 
 - **To Email:** Setează la `menopauzactiva@gmail.com`
@@ -57,7 +57,7 @@ Acest mesaj a fost trimis automat de pe site-ul Metoda AMR 40+
 
 **Subject (Subiect):**
 ```
-Mulțumim pentru interesul acordat - Metoda AMR 40+
+Mulțumim pentru interesul acordat - Metoda AMR 35+
 ```
 
 **Content (Conținut):**
@@ -68,10 +68,10 @@ Mulțumim că ne-ai contactat!
 
 Am primit cererea ta și vom reveni cu un răspuns în cel mai scurt timp posibil.
 
-În între timp, poți afla mai multe despre Metoda AMR 40+ pe site-ul nostru sau ne poți urmări pe rețelele sociale pentru sfaturi și informații utile.
+În între timp, poți afla mai multe despre Metoda AMR 35+ pe site-ul nostru sau ne poți urmări pe rețelele sociale pentru sfaturi și informații utile.
 
 Cu drag,
-Echipa Metoda AMR 40+
+Echipa Metoda AMR 35+
 
 ---
 Acest email a fost trimis automat. Pentru întrebări, ne poți contacta la menopauzactiva@gmail.com

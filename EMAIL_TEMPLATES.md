@@ -6,7 +6,7 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
 
 ## 📨 TEMPLATE 1: Notificare pentru Business
 
-**Nume template:** `AMR40 - Notificare Contact`
+**Nume template:** `AMR35 - Notificare Contact`
 
 ### Configurare EmailJS:
 - **To Email:** `menopauzactiva@gmail.com`
@@ -37,11 +37,11 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
     <div class="container">
         <div class="header">
             <h1>🎯 Cerere Nouă de Contact</h1>
-            <p>Metoda AMR 40+</p>
+            <p>Metoda AMR 35+</p>
         </div>
         
         <div class="content">
-            <p>Ai primit o nouă cerere de contact de pe site-ul Metoda AMR 40+!</p>
+            <p>Ai primit o nouă cerere de contact de pe site-ul Metoda AMR 35+!</p>
             
             <div class="info-box">
                 <h3>📋 Detalii Client:</h3>
@@ -62,8 +62,8 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
         </div>
         
         <div class="footer">
-            <p>Acest email a fost trimis automat de pe site-ul Metoda AMR 40+</p>
-            <p>© 2025 Metoda AMR 40+ | Iulia Popa</p>
+            <p>Acest email a fost trimis automat de pe site-ul Metoda AMR 35+</p>
+            <p>© 2025 Metoda AMR 35+ | Iulia Popa</p>
         </div>
     </div>
 </body>
@@ -74,16 +74,16 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
 
 ## 💌 TEMPLATE 2: Email Automat de Mulțumire pentru Client
 
-**Nume template:** `AMR40 - Confirmare Contact`
+**Nume template:** `AMR35 - Confirmare Contact`
 
 ### Configurare EmailJS:
 - **To Email:** `{{from_email}}` ⚠️ **IMPORTANT: Folosește variabila, nu hardcodat!**
-- **From Name:** `Metoda AMR 40+ - Iulia Popa`
+- **From Name:** `Metoda AMR 35+ - Iulia Popa`
 - **Reply To:** `menopauzactiva@gmail.com`
 
 ### Subject (Subiect):
 ```
-✨ Mulțumim pentru interesul acordat - Metoda AMR 40+
+✨ Mulțumim pentru interesul acordat - Metoda AMR 35+
 ```
 
 ### Content (Conținut HTML):
@@ -120,7 +120,7 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
         <div class="content">
             <p style="font-size: 16px;">Bună {{from_name}},</p>
             
-            <p>Mulțumim că ne-ai contactat și pentru interesul acordat <strong>Metodei AMR 40+</strong>!</p>
+            <p>Mulțumim că ne-ai contactat și pentru interesul acordat <strong>Metodei AMR 35+</strong>!</p>
             
             <div class="highlight-box">
                 <h3 style="margin-top: 0; color: #667eea;">🎯 Ce urmează?</h3>
@@ -130,9 +130,9 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
                 </p>
             </div>
             
-            <h3 style="color: #667eea;">💪 Despre Metoda AMR 40+</h3>
+            <h3 style="color: #667eea;">💪 Despre Metoda AMR 35+</h3>
             <p>
-                Metoda AMR 40+ este programul dedicat femeilor 40+ pentru recuperarea controlului 
+                Metoda AMR 35+ este programul dedicat femeilor 35+ pentru recuperarea controlului 
                 asupra corpului prin <strong>antrenament personalizat</strong>, <strong>nutriție 
                 echilibrată</strong> și <strong>recuperare optimă</strong>.
             </p>
@@ -170,7 +170,7 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
             
             <p style="font-size: 12px; color: #999;">
                 Acest email a fost trimis automat ca răspuns la cererea ta de contact.<br>
-                © 2025 Metoda AMR 40+ | Iulia Popa | Toate drepturile rezervate
+                © 2025 Metoda AMR 35+ | Iulia Popa | Toate drepturile rezervate
             </p>
         </div>
     </div>
@@ -229,9 +229,9 @@ Poți modifica culorile în stilul CSS:
 - Background: `#f9f9f9` (gri deschis)
 
 ### Adăugare Logo
-Dacă vrei să adaugi logo-ul Metodei AMR 40+:
+Dacă vrei să adaugi logo-ul Metodei AMR 35+:
 ```html
-<img src="URL_LOGO" alt="Metoda AMR 40+" style="max-width: 200px; margin: 20px auto;">
+<img src="URL_LOGO" alt="Metoda AMR 35+" style="max-width: 200px; margin: 20px auto;">
 ```
 
 ### Verificare Spam
