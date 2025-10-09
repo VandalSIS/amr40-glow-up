@@ -71,10 +71,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-accent" />
                 <a 
-                  href="mailto:contact@popaiulia.com" 
+                  href="mailto:menopauzactiva@gmail.com" 
                   className="font-sans text-primary-foreground/80 hover:text-accent transition-colors duration-300"
                 >
-                  contact@popaiulia.com
+                  menopauzactiva@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">

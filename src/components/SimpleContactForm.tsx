@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
+import { emailjsConfig } from "@/config/emailjs.config";
 
 interface SimpleContactFormProps {
   isOpen: boolean;
@@ -14,14 +17,67 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
     phone: "",
     email: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const { toast } = useToast();
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", phone: "", email: "" });
-    onClose();
+    setIsSubmitting(true);
+
+    try {
+      // Email 1: Notificare către menopauzactiva@gmail.com
+      const notificationParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        to_email: emailjsConfig.toEmail,
+        message: `Nume: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}`
+      };
+
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.notificationTemplateId,
+        notificationParams,
+        emailjsConfig.publicKey
+      );
+
+      // Email 2: Mesaj de mulțumire automat către client
+      const thankyouParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        reply_to: emailjsConfig.toEmail
+      };
+
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.thankyouTemplateId,
+        thankyouParams,
+        emailjsConfig.publicKey
+      );
+
+      // Show success message
+      setShowSuccess(true);
+      setFormData({ name: "", phone: "", email: "" });
+      
+      // Auto close after 3 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+        onClose();
+      }, 3000);
+
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Eroare",
+        description: `A apărut o eroare la trimiterea mesajului. Te rog încearcă din nou sau contactează-ne direct la ${emailjsConfig.toEmail}`,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,84 +104,107 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
           <X className="h-5 w-5 text-gray-600" />
         </button>
 
-        <div className="mb-6 text-center pr-10">
-          <h2 className="font-serif text-2xl font-bold text-primary mb-2">
-            {title}
-          </h2>
-          <p className="font-sans text-gray-600 text-sm leading-relaxed">
-            Completează formularul și te voi contacta în cel mai scurt timp.
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
-              Nume complet
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white"
-              placeholder="Introdu numele tău complet"
-              style={{ width: '100%' }}
-            />
+        {showSuccess ? (
+          <div className="text-center py-8">
+            <div className="mb-4 flex justify-center">
+              <CheckCircle2 className="h-16 w-16 text-green-500" />
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-primary mb-3">
+              Mulțumim!
+            </h3>
+            <p className="font-sans text-gray-700 text-base leading-relaxed mb-2">
+              Mesajul tău a fost trimis cu succes.
+            </p>
+            <p className="font-sans text-gray-600 text-sm leading-relaxed">
+              Te vom contacta în cel mai scurt timp posibil.
+            </p>
           </div>
+        ) : (
+          <>
+            <div className="mb-6 text-center pr-10">
+              <h2 className="font-serif text-2xl font-bold text-primary mb-2">
+                {title}
+              </h2>
+              <p className="font-sans text-gray-600 text-sm leading-relaxed">
+                Completează formularul și te voi contacta în cel mai scurt timp.
+              </p>
+            </div>
 
-          <div>
-            <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
-              Număr de telefon
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white"
-              placeholder="+40 xxx xxx xxx"
-              style={{ width: '100%' }}
-            />
-          </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
+                  Nume complet
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white disabled:opacity-50"
+                  placeholder="Introdu numele tău complet"
+                  style={{ width: '100%' }}
+                />
+              </div>
 
-          <div>
-            <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
-              Adresa de email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white"
-              placeholder="nume@email.com"
-              style={{ width: '100%' }}
-            />
-          </div>
+              <div>
+                <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
+                  Număr de telefon
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white disabled:opacity-50"
+                  placeholder="+40 xxx xxx xxx"
+                  style={{ width: '100%' }}
+                />
+              </div>
 
-          <div className="pt-4">
-            <Button 
-              type="submit" 
-              variant="hero" 
-              className="w-full h-12 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              style={{ width: '100%' }}
-            >
-              Trimite cererea
-            </Button>
-          </div>
-        </form>
+              <div>
+                <label className="block font-accent font-semibold text-gray-800 mb-3 text-sm uppercase tracking-wide">
+                  Adresa de email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-0 focus:border-primary transition-all duration-300 font-sans text-gray-800 placeholder-gray-400 bg-gray-50 focus:bg-white disabled:opacity-50"
+                  placeholder="nume@email.com"
+                  style={{ width: '100%' }}
+                />
+              </div>
 
-        <div className="mt-4 pt-4 border-t border-gray-100">
-          <p className="text-xs text-gray-600 text-center leading-relaxed mb-1">
-            Prin trimiterea acestui formular, accepți să fii contactat(ă) pentru detalii despre program.
-          </p>
-          <p className="text-xs text-gray-500 text-center font-medium">
-            🔒 Datele tale sunt protejate conform GDPR
-          </p>
-        </div>
+              <div className="pt-4">
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  disabled={isSubmitting}
+                  className="w-full h-12 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+                  style={{ width: '100%' }}
+                >
+                  {isSubmitting ? "Se trimite..." : "Trimite cererea"}
+                </Button>
+              </div>
+            </form>
+
+            <div className="mt-4 pt-4 border-t border-gray-100">
+              <p className="text-xs text-gray-600 text-center leading-relaxed mb-1">
+                Prin trimiterea acestui formular, accepți să fii contactat(ă) pentru detalii despre program.
+              </p>
+              <p className="text-xs text-gray-500 text-center font-medium">
+                🔒 Datele tale sunt protejate conform GDPR
+              </p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
