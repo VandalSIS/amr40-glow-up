@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SimpleContactFormProps {
@@ -14,14 +14,46 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
     phone: "",
     email: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", phone: "", email: "" });
-    onClose();
+    setIsSubmitting(true);
+    setError("");
+    
+    try {
+      const response = await fetch('http://localhost:3001/api/send-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSuccess(true);
+        setFormData({ name: "", phone: "", email: "" });
+        
+        // Închide formularul după 3 secunde
+        setTimeout(() => {
+          setIsSuccess(false);
+          onClose();
+        }, 3000);
+      } else {
+        setError(result.message || 'A apărut o eroare la trimiterea mesajului.');
+      }
+    } catch (error) {
+      console.error('Eroare la trimiterea formularului:', error);
+      setError('Nu s-a putut conecta la server. Te rugăm să încerci din nou.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,6 +88,26 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
             Completează formularul și te voi contacta în cel mai scurt timp.
           </p>
         </div>
+
+        {/* Success Message */}
+        {isSuccess && (
+          <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+            <div className="flex items-center justify-center gap-3">
+              <CheckCircle className="h-6 w-6 text-green-600" />
+              <div className="text-center">
+                <p className="font-semibold text-green-800 text-lg">Mulțumim!</p>
+                <p className="text-green-700 text-sm">Mesajul a fost trimis cu succes. Te voi contacta în curând!</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Error Message */}
+        {error && (
+          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+            <p className="text-red-700 text-sm text-center">{error}</p>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -112,8 +164,21 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
               variant="hero" 
               className="w-full h-12 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               style={{ width: '100%' }}
+              disabled={isSubmitting || isSuccess}
             >
-              Trimite cererea
+              {isSubmitting ? (
+                <div className="flex items-center gap-2">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Se trimite...
+                </div>
+              ) : isSuccess ? (
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4" />
+                  Trimis cu succes!
+                </div>
+              ) : (
+                "Trimite cererea"
+              )}
             </Button>
           </div>
         </form>
