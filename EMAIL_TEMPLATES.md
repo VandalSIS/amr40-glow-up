@@ -74,7 +74,7 @@ Aici găsești template-urile exacte pe care trebuie să le configurezi în Emai
 
 ## 💌 TEMPLATE 2: Email Automat de Mulțumire pentru Client
 
-**Nume template:** `AMR35 - Confirmare Contact`
+**Nume template:** `AMR40 - Confirmare Contact`
 
 ### Configurare EmailJS:
 - **To Email:** `{{from_email}}` ⚠️ **IMPORTANT: Folosește variabila, nu hardcodat!**

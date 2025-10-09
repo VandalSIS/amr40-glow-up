@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="Wellness pentru femei - Metoda AMR 35+"
+          alt="Wellness pentru femei - Metoda AMR 40+"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center center' }}
         />
