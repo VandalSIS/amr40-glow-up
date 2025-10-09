@@ -1,51 +1,25 @@
-const express = require('express');
-const cors = require('cors');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-// Middleware
-app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000', 'https://popaiulia.com'],
-  credentials: true
-}));
-app.use(express.json());
-
-// Configurează Nodemailer cu SMTP din cPanel
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'mail.popaiulia.com',
-  port: parseInt(process.env.SMTP_PORT) || 465,
-  secure: true, // true pentru port 465 (SSL)
-  auth: {
-    user: process.env.SMTP_USER || 'contact@popaiulia.com',
-    pass: process.env.SMTP_PASS || 'popaiulia2025'
-  },
-  tls: {
-    rejectUnauthorized: false
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
   }
-});
 
-// Verifică conexiunea SMTP
-transporter.verify((error, success) => {
-  if (error) {
-    console.log('❌ SMTP Connection Error:', error);
-    console.log('❌ SMTP Details:', {
-      host: process.env.SMTP_HOST || 'mail.popaiulia.com',
-      port: process.env.SMTP_PORT || 465,
-      user: process.env.SMTP_USER || 'contact@popaiulia.com'
-    });
-  } else {
-    console.log('✅ SMTP Server ready to send emails');
+  if (req.method !== 'POST') {
+    return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
-});
 
-// Endpoint pentru trimiterea email-urilor
-app.post('/api/send-contact', async (req, res) => {
-  console.log('📧 Received contact form:', req.body);
   try {
     const { name, phone, email } = req.body;
+
+    console.log('📧 Received contact form:', { name, phone, email });
 
     // Validare date
     if (!name || !phone || !email) {
@@ -55,10 +29,24 @@ app.post('/api/send-contact', async (req, res) => {
       });
     }
 
+    // Configurează Nodemailer cu SMTP din cPanel
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || 'mail.popaiulia.com',
+      port: parseInt(process.env.SMTP_PORT) || 465,
+      secure: true, // true pentru port 465 (SSL)
+      auth: {
+        user: process.env.SMTP_USER || 'contact@popaiulia.com',
+        pass: process.env.SMTP_PASS || 'popaiulia2025'
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+
     // Email pentru tine (contact@popaiulia.com)
     const mailOptions = {
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER, // contact@popaiulia.com
+      from: `"${name}" <${process.env.SMTP_USER || 'contact@popaiulia.com'}>`,
+      to: process.env.SMTP_USER || 'contact@popaiulia.com',
       subject: `🔔 Nouă cerere de contact - ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -93,7 +81,7 @@ app.post('/api/send-contact', async (req, res) => {
 
     console.log(`✅ Email trimis cu succes pentru: ${name} (${email})`);
 
-    res.json({ 
+    res.status(200).json({ 
       success: true, 
       message: 'Mesajul a fost trimis cu succes!' 
     });
@@ -105,20 +93,4 @@ app.post('/api/send-contact', async (req, res) => {
       message: 'A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou.' 
     });
   }
-});
-
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'OK', 
-    message: 'Contact form backend is running',
-    timestamp: new Date().toISOString()
-  });
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📧 SMTP Host: ${process.env.SMTP_HOST}`);
-  console.log(`📧 SMTP User: ${process.env.SMTP_USER}`);
-});
+}
