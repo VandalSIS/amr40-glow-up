@@ -25,10 +25,10 @@
 // 5. Replace the values below with your actual EmailJS credentials
 
 export const emailjsConfig = {
-  serviceId: 'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-  notificationTemplateId: 'YOUR_NOTIFICATION_TEMPLATE_ID', // Template pentru notificare către tine
-  thankyouTemplateId: 'YOUR_THANKYOU_TEMPLATE_ID', // Template pentru email automat către client
-  publicKey: 'YOUR_PUBLIC_KEY', // Replace with your EmailJS public key
+  serviceId: 'service_ahg68c9', // EmailJS service ID
+  notificationTemplateId: 'template_djp5muf', // Template pentru notificare către tine
+  thankyouTemplateId: 'template_97001e6', // Template pentru email automat către client
+  publicKey: '6EI3H9JebbrxFP_gf', // EmailJS public key
   toEmail: 'menopauzactiva@gmail.com', // Email unde primești notificările
 };
 
