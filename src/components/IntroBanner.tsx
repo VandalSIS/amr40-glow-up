@@ -4,7 +4,7 @@ const IntroBanner = () => {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <p className="font-sans text-white text-xl lg:text-2xl xl:text-3xl leading-relaxed max-w-5xl mx-auto font-medium">
-            Alătură-te primului program de coaching one-to-many din România dedicat 
+            Alătură-te unui program de coaching one-to-many din România dedicat 
             <span className="font-bold"> EXCLUSIV femeilor</span>, 
             unde te învăț cum să îți recuperezi controlul asupra corpului – folosind exact ceea ce 
             funcționează <span className="font-bold">DUPĂ vârsta de 35</span>.

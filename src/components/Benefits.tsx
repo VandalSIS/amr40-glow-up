@@ -34,7 +34,7 @@ const Benefits = () => {
     },
     {
       icon: FileText,
-      title: "Un rezumat practic cu tips & tricks, în lipești pe frigider pentru aplicare imediată",
+      title: "Un rezumat practic cu tips & tricks, îl lipești pe frigider pentru aplicare imediată",
       description: ""
     }
   ];
