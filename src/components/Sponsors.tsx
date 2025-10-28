@@ -5,6 +5,7 @@ import ginsima from "@/assets/ginsima.png";
 import screenshot2 from "@/assets/Screenshot_7-10-2025_161025_.jpeg";
 import obioLogo from "@/assets/LOGO_Obio(RGB)-01.png";
 import biocyteLogo from "@/assets/WhatsApp Image 2025-10-25 at 08.19.40_2361d241.jpg";
+import zimbriaLogo from "@/assets/Logo color.png";
 
 const Sponsors = () => {
   const sponsors = [
@@ -28,6 +29,9 @@ const Sponsors = () => {
     },
     {
       logo: biocyteLogo,
+    },
+    {
+      logo: zimbriaLogo,
     }
   ];
 
