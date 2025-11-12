@@ -11,27 +11,35 @@ const Sponsors = () => {
   const sponsors = [
     {
       logo: inBodyLogo,
+      url: "",
     },
     {
       logo: proNutritionLogo,
+      url: "https://www.pronutrition.ro/",
     },
     {
       logo: caffeCostadoroLogo,
+      url: "",
     },
     {
       logo: ginsima,
+      url: "https://ginissima.ro/",
     },
     {
       logo: screenshot2,
+      url: "https://artesana.ro/",
     },
     {
       logo: obioLogo,
+      url: "https://www.obio.ro/",
     },
     {
       logo: biocyteLogo,
+      url: "https://www.biocyte.ro/",
     },
     {
       logo: zimbriaLogo,
+      url: "https://zimbria.ro/",
     }
   ];
 
@@ -48,12 +56,8 @@ const Sponsors = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto justify-items-center">
-          {sponsors.map((sponsor, index) => (
-            <div 
-              key={index}
-              className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          {sponsors.map((sponsor, index) => {
+            const content = (
               <div className="bg-white rounded-xl p-4 mx-auto w-fit">
                 <img 
                   src={sponsor.logo} 
@@ -61,8 +65,29 @@ const Sponsors = () => {
                   className="h-16 w-auto object-contain mx-auto"
                 />
               </div>
-            </div>
-          ))}
+            );
+
+            return sponsor.url ? (
+              <a
+                key={index}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center cursor-pointer"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {content}
+              </a>
+            ) : (
+              <div 
+                key={index}
+                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {content}
+              </div>
+            );
+          })}
         </div>
         
         <div className="text-center mt-12">

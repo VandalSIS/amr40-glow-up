@@ -42,7 +42,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-lg">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">06–09 noiembrie 2025</span>
+              <span className="font-accent font-medium">12-15 martie 2026 - ediția a doua</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-accent" />

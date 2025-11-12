@@ -44,7 +44,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Calendar className="h-5 w-5 text-accent mt-1" />
                 <div>
-                  <p className="font-accent font-semibold">06–09 noiembrie 2025</p>
+                  <p className="font-accent font-semibold">12-15 martie 2026 - ediția a doua</p>
                   <p className="font-sans text-sm text-primary-foreground/70">
                     4 zile intensive de transformare
                   </p>

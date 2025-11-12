@@ -15,7 +15,7 @@ const Pricing = () => {
   const pricingOptions = [
     {
       type: "Cameră single",
-      price: "1257€",
+      price: "1299€",
       description: "Confort complet și intimitate pentru concentrare maximă",
       features: [
         "Camera single cu baie privată",
@@ -29,7 +29,7 @@ const Pricing = () => {
     },
     {
       type: "Cameră dublă",
-      price: "1021€",
+      price: "1099€",
       description: "Experiență completă cu posibilitatea de a împărți cu o prietenă",
       features: [
         "Camera dublă cu baie privată",
@@ -57,7 +57,7 @@ const Pricing = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-foreground">
               <Calendar className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">06–09 noiembrie 2025</span>
+              <span className="font-accent font-medium">12-15 martie 2026 - ediția a doua</span>
             </div>
             <div className="flex items-center gap-2 text-foreground">
               <MapPin className="h-5 w-5 text-accent" />
