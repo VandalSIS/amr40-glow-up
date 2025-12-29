@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: "După cele 4 zile, voi putea continua singură ce am învățat?",
-      answer: "Da! Scopul programului este să te împuternicesc să pui imediat in practica singură ceea ce primești. După retreat vei ști exact ce ai de făcut și cum să ceri sprijinul altora (de la antrenor, bucătar sau familie), atunci când ai nevoie."
+      answer: "Da! Scopul programului este să te împuternicesc să pui imediat în practică singură ceea ce primești. După retreat vei ști exact ce ai de făcut și cum să ceri sprijinul altora (de la antrenor, bucătar sau familie), atunci când ai nevoie."
     },
     {
       question: "Voi primi materiale de suport?",

@@ -12,6 +12,7 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
@@ -26,8 +27,9 @@ const Index = () => {
       <Experience />
       <Pricing />
       <Benefits />
-      <Sponsors />
       <AMRMethod />
+      <Testimonials />
+      <Sponsors />
       <FAQ />
       <Footer />
       

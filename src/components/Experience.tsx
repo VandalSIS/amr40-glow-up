@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Target, Utensils, Heart, BookOpen, Star, Users, X } from "lucide-react";
-import workoutImage from "@/assets/iulia-training-photo.jpg";
-import nutritionImage from "@/assets/mancare.jpg";
-import physiologyImage from "@/assets/fiziologia.jpg";
-import workshopImage from "@/assets/workshop.jpg";
+import workoutImage from "@/assets/poza antrenamente inteligente si cu scop.jpg";
+import nutritionImage from "@/assets/Nutritie personalizata.jpg";
+import physiologyImage from "@/assets/Fiziologia unica a femeii.jpg";
+import workshopImage from "@/assets/workshopuri educationale.jpg";
 import accommodationImage from "@/assets/5-Star-Accomodation-1-scaled.jpg";
-import atmosphereImage from "@/assets/a-serene-lifestyle-advertisement-promoti_ykK-OdfPSMGjx0MvscVCQA_02LLfFT_SU-1zkJGh1j8fw.jpeg";
+import atmosphereImage from "@/assets/Spatiu pentru tranmsformare.jpg";
 
 const Experience = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -48,7 +48,7 @@ const Experience = () => {
     {
       icon: Users,
       title: "Spațiu exclusiv pentru transformare",
-      description: "…pentru că doar rupându-te de agitația și responsabilitățile zilnice îți poți muta atenția spre tine. În acest cadru restrâns, cu doar 20 de participante, primești atenția personală și liniștea necesară ca să înveți, să integrezi și să te reconectezi cu propriul corp.",
+      description: "…pentru că doar rupându-te de agitația și responsabilitățile zilnice îți poți muta atenția spre tine. În acest cadru restrâns, cu doar 18 participante, primești atenția personală și liniștea necesară ca să înveți, să integrezi și să te reconectezi cu propriul corp.",
       image: atmosphereImage,
       imagePosition: "center center",
     },

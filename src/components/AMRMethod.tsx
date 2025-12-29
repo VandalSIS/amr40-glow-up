@@ -23,7 +23,7 @@ const AMRMethod = () => {
       letter: "R",
       title: "Recuperare",
       subtitle: "Elementul secret",
-      description: "Muschii se construiesc si grasimea se arde in timp ce te odihnesti, dupa ce te-ai antrenat și după ce ai mancat ce trebuie. Te invăț cum să faci asta perfect.",
+      description: "Mușchii se construiesc și grăsimea se arde în timp ce te odihnești, după ce te-ai antrenat și după ce ai mâncat ce trebuie. Te învăț cum să faci asta perfect.",
       benefits: []
     }
   ];

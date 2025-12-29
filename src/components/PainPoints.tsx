@@ -18,7 +18,7 @@ const PainPoints = () => {
     },
     {
       icon: Scale,
-      title: "Mănânci din ce în ce mai puțin, dar cântarul refuză să arate mai putine kilograme?",
+      title: "Mănânci din ce în ce mai puțin, dar cântarul refuză să arate mai puține kilograme?",
       description: "",
       color: "text-primary"
     },

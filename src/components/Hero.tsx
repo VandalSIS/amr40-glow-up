@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-wellness-women.jpg";
+import heroImage from "@/assets/poza primul fundal.jpg";
 import { Calendar, MapPin } from "lucide-react";
 
 const Hero = () => {

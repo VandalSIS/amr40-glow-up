@@ -65,7 +65,7 @@ const Pricing = () => {
             </div>
             <div className="flex items-center gap-2 text-foreground">
               <Users className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">Maxim 20 participante</span>
+              <span className="font-accent font-medium">Maxim 18 participante</span>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ const Pricing = () => {
             </div>
             <p className="font-sans leading-relaxed">
               Pentru a asigura atenția personalizată și calitatea experienței, 
-              acceptăm maximum 20 de participante. Nu rata această oportunitate unică!
+              acceptăm maximum 18 participante. Nu rata această oportunitate unică!
             </p>
           </div>
         </div>
