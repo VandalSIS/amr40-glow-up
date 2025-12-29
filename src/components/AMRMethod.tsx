@@ -33,10 +33,10 @@ const AMRMethod = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Metoda A.M.R. 35+
+            Metoda A.M.R. 35+ by Iulia Popa
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto">
-            O abordare inteligentă și cu scop, dovedită de știință și experiență, pentru combaterea și prevenirea principalelor 3 consecințe ale diminuării principalilor hormonilor feminini la peri & postmenopauză:
+            O abordare inteligentă și cu scop, dovedită de știință și experiență, pentru combaterea și prevenirea principalelor 3 consecințe ale diminuării principalilor hormoni feminini la peri & postmenopauză: <strong>pierderea vertiginoasă de masă musculară, acumularea grăsimii viscerale, diminuarea densității osoase!</strong>
           </p>
         </div>
         

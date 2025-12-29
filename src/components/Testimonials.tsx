@@ -141,8 +141,10 @@ Demonstrațiile practice despre ce înseamnă, concret, o 'farfurie de mâncare'
             <div className="p-8">
               <Quote className="h-10 w-10 text-primary/20 mb-4" />
               
-              <div className="font-sans text-foreground leading-relaxed whitespace-pre-line mb-6">
-                {currentTestimonial.quote}
+              <div className="font-sans text-foreground leading-normal whitespace-pre-line mb-6 [&>*]:mb-2">
+                {currentTestimonial.quote.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="mb-3">{paragraph}</p>
+                ))}
               </div>
 
               {/* Results List (for featured testimonial) */}
