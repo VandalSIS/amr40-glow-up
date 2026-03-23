@@ -63,6 +63,8 @@ const Sponsors = () => {
                   src={sponsor.logo} 
                   alt={`Partener ${index + 1}`}
                   className="h-16 w-auto object-contain mx-auto"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             );

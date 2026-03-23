@@ -21,6 +21,8 @@ const AboutCoach = () => {
                 src={coachImage} 
                 alt="Iulia Popa - Menopause Coach & Fitness Specialist" 
                 className="w-full max-w-md mx-auto lg:max-w-full rounded-2xl shadow-elegant"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute -bottom-2 -right-2 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-soft">
                 <div className="flex items-center gap-2">

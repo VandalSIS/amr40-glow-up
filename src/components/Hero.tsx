@@ -19,6 +19,9 @@ const Hero = () => {
           alt="Wellness pentru femei - Metoda AMR 40+"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center center' }}
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

@@ -82,6 +82,8 @@ const Experience = () => {
                   alt={component.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   style={{ objectPosition: component.imagePosition }}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -133,6 +135,7 @@ const Experience = () => {
             alt="Imagine mărită"
             className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            decoding="async"
           />
         </div>
       )}
