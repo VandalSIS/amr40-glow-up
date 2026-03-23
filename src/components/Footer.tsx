@@ -42,16 +42,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Calendar className="h-5 w-5 text-accent mt-1" />
-                <div>
-                  <p className="font-accent font-semibold">12-15 martie 2026 - ediția a doua</p>
-                  <p className="font-sans text-sm text-primary-foreground/70">
-                    4 zile intensive de transformare
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-accent mt-1" />
+                <MapPin className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-accent font-semibold">Domeniul Toma, Covasna</p>
                   <p className="font-sans text-sm text-primary-foreground/70">
@@ -59,6 +50,20 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
+              {[
+                { date: "12-15 martie 2026", editie: "Ediția a II-a" },
+                { date: "2-5 iulie 2026", editie: "Ediția a III-a" },
+                { date: "1-4 octombrie 2026", editie: "Ediția a IV-a" },
+                { date: "5-8 noiembrie 2026", editie: "Ediția a V-a" },
+              ].map((e) => (
+                <div key={e.editie} className="flex items-center gap-3">
+                  <Calendar className="h-4 w-4 text-accent flex-shrink-0" />
+                  <div>
+                    <p className="font-accent font-semibold text-sm">{e.date}</p>
+                    <p className="font-sans text-xs text-primary-foreground/70">{e.editie} • 4 zile de transformare</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
           
@@ -123,7 +128,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="text-center">
             <p className="font-sans text-sm text-primary-foreground/60">
-              © 2025 Metoda AMR 35+ by Iulia Popa. Toate drepturile rezervate.
+              © 2026 Metoda AMR 35+ by Iulia Popa. Toate drepturile rezervate.
             </p>
           </div>
         </div>

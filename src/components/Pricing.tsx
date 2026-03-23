@@ -3,12 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
 import SimpleContactForm from "./SimpleContactForm";
 
+const editions = [
+  { id: "editia-2", label: "12-15 martie 2026", sublabel: "Ediția a II-a" },
+  { id: "editia-3", label: "2-5 iulie 2026", sublabel: "Ediția a III-a" },
+  { id: "editia-4", label: "1-4 octombrie 2026", sublabel: "Ediția a IV-a" },
+  { id: "editia-5", label: "5-8 noiembrie 2026", sublabel: "Ediția a V-a" },
+];
+
 const Pricing = () => {
   const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const [selectedEdition, setSelectedEdition] = useState(editions[0].id);
 
   const handleReservation = (optionType: string) => {
-    setSelectedOption(optionType);
+    const edition = editions.find((e) => e.id === selectedEdition);
+    setSelectedOption(`${optionType} – ${edition?.sublabel} (${edition?.label})`);
     setIsContactPopupOpen(true);
   };
 
@@ -54,11 +63,7 @@ const Pricing = () => {
             Alătură-te unei experiențe all-inclusive de 4 zile, într-o locație luxoasă de 5 stele.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 text-foreground">
-              <Calendar className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">12-15 martie 2026 - ediția a doua</span>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-foreground">
               <MapPin className="h-5 w-5 text-accent" />
               <span className="font-accent font-medium">Domeniul Toma, Covasna</span>
@@ -66,6 +71,30 @@ const Pricing = () => {
             <div className="flex items-center gap-2 text-foreground">
               <Users className="h-5 w-5 text-accent" />
               <span className="font-accent font-medium">Maxim 18 participante</span>
+            </div>
+          </div>
+
+          {/* Edition selector */}
+          <div className="mb-12">
+            <p className="font-accent font-semibold text-foreground mb-4 flex items-center justify-center gap-2">
+              <Calendar className="h-5 w-5 text-accent" />
+              Alege ediția la care vrei să participi:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {editions.map((edition) => (
+                <button
+                  key={edition.id}
+                  onClick={() => setSelectedEdition(edition.id)}
+                  className={`px-5 py-3 rounded-xl border-2 transition-all duration-200 text-left ${
+                    selectedEdition === edition.id
+                      ? "border-accent bg-accent text-white shadow-elegant"
+                      : "border-border bg-white text-foreground hover:border-accent/60"
+                  }`}
+                >
+                  <p className="font-accent font-semibold text-sm leading-tight">{edition.label}</p>
+                  <p className={`font-sans text-xs leading-tight mt-0.5 ${selectedEdition === edition.id ? "text-white/80" : "text-muted-foreground"}`}>{edition.sublabel}</p>
+                </button>
+              ))}
             </div>
           </div>
         </div>

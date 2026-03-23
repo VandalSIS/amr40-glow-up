@@ -39,14 +39,26 @@ const Hero = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-lg">
-            <div className="flex items-center gap-2">
-              <Calendar className="h-5 w-5 text-accent" />
-              <span className="font-accent font-medium">12-15 martie 2026 - ediția a doua</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-accent" />
+          <div className="flex flex-col items-center gap-4 mb-10">
+            <div className="flex items-center gap-2 text-lg">
+              <MapPin className="h-5 w-5 text-accent flex-shrink-0" />
               <span className="font-accent font-medium">Domeniul Toma, Covasna</span>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {[
+                { date: "12-15 martie 2026", editie: "Ediția a II-a" },
+                { date: "2-5 iulie 2026", editie: "Ediția a III-a" },
+                { date: "1-4 octombrie 2026", editie: "Ediția a IV-a" },
+                { date: "5-8 noiembrie 2026", editie: "Ediția a V-a" },
+              ].map((e) => (
+                <div key={e.editie} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-xl px-4 py-2">
+                  <Calendar className="h-4 w-4 text-accent flex-shrink-0" />
+                  <div className="text-left">
+                    <p className="font-accent font-semibold text-sm leading-tight">{e.date}</p>
+                    <p className="font-accent text-xs text-white/70 leading-tight">{e.editie}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
           
