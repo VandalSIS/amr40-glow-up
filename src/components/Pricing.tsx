@@ -4,7 +4,6 @@ import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
 import SimpleContactForm from "./SimpleContactForm";
 
 const editions = [
-  { id: "editia-2", label: "12-15 martie 2026", sublabel: "Ediția a II-a" },
   { id: "editia-3", label: "2-5 iulie 2026", sublabel: "Ediția a III-a" },
   { id: "editia-4", label: "1-4 octombrie 2026", sublabel: "Ediția a IV-a" },
   { id: "editia-5", label: "5-8 noiembrie 2026", sublabel: "Ediția a V-a" },

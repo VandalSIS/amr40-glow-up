@@ -51,7 +51,6 @@ const Footer = () => {
                 </div>
               </div>
               {[
-                { date: "12-15 martie 2026", editie: "Ediția a II-a" },
                 { date: "2-5 iulie 2026", editie: "Ediția a III-a" },
                 { date: "1-4 octombrie 2026", editie: "Ediția a IV-a" },
                 { date: "5-8 noiembrie 2026", editie: "Ediția a V-a" },
