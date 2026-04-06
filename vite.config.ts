@@ -11,11 +11,24 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  // Extensii cu majuscule (telefon/cameră) — altfel Vite încearcă să parseze binarele ca JS
+  assetsInclude: [
+    "**/*.JPEG",
+    "**/*.JPG",
+    "**/*.PNG",
+    "**/*.WEBP",
+    "**/*.GIF",
+    "**/*.MP4",
+    "**/*.WEBM",
+    "**/*.MOV",
+  ],
   plugins: [
     react(),
     mode === "development" && componentTagger(),
     resizePastEditionGalleryPlugin(),
     ViteImageOptimizer({
+      // Fără SVG — nu necesită svgo instalat (placeholder.svg etc.)
+      test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
       // JPEG: mozjpeg + progressive = fișiere mai mici și încărcare mai plăcută
       jpg: {
         quality: 76,
@@ -44,7 +57,6 @@ export default defineConfig(({ mode }) => ({
         quality: 70,
         effort: 6,
       },
-      svg: false,
       logStats: true,
     }),
   ].filter(Boolean),
