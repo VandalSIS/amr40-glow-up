@@ -49,23 +49,34 @@ function EditionCarousel({ items, editionKey }: { items: PastEditionMedia[]; edi
   }
 
   return (
-    <div ref={wrapRef} className="relative max-w-4xl mx-auto px-10 sm:px-14">
+    <div
+      ref={wrapRef}
+      className="relative max-w-4xl mx-auto w-full px-1 sm:px-6 md:px-14"
+    >
       <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
         <CarouselContent>
           {items.map((item, index) => (
             <CarouselItem key={item.key}>
-              <div className="relative rounded-2xl overflow-hidden shadow-elegant bg-black/5 aspect-[4/3] flex items-center justify-center">
+              <div
+                className={cn(
+                  "relative rounded-2xl overflow-hidden shadow-elegant bg-black/5",
+                  "flex items-center justify-center w-full",
+                  // Mobil: înălțime mare ca pozele să fie lizibile; desktop: raport 4/3
+                  "h-[min(72vh,620px)] min-h-[280px] sm:min-h-0 sm:h-auto sm:aspect-[4/3] sm:max-h-[min(85vh,720px)]",
+                )}
+              >
                 {item.kind === "image" ? (
                   <img
                     src={item.src}
                     alt={`Momente retreat — ${editionKey}, ${index + 1}`}
-                    className="w-full h-full object-contain"
+                    className="h-full w-full max-h-full object-contain object-center"
                     loading="lazy"
                     decoding="async"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 896px"
                   />
                 ) : (
                   <video
-                    className="w-full h-full object-contain max-h-[70vh]"
+                    className="h-full w-full max-h-full object-contain object-center sm:max-h-[min(75vh,680px)]"
                     controls
                     playsInline
                     preload="metadata"
@@ -80,7 +91,7 @@ function EditionCarousel({ items, editionKey }: { items: PastEditionMedia[]; edi
         </CarouselContent>
         <CarouselPrevious
           className={cn(
-            "left-0 sm:left-1 border-2 border-primary/25 bg-white/95 shadow-md",
+            "left-0 sm:left-1 h-11 w-11 min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 sm:min-h-8 sm:min-w-8 border-2 border-primary/25 bg-white/95 shadow-md",
             // outline: hover:text-primary-foreground + fundal alb = săgeată invizibilă — forțăm culoarea iconului
             "text-primary hover:!bg-white hover:!text-primary focus-visible:!text-primary active:!text-primary",
             "[&_svg]:text-inherit",
@@ -89,7 +100,7 @@ function EditionCarousel({ items, editionKey }: { items: PastEditionMedia[]; edi
         />
         <CarouselNext
           className={cn(
-            "right-0 sm:right-1 border-2 border-primary/25 bg-white/95 shadow-md",
+            "right-0 sm:right-1 h-11 w-11 min-h-[44px] min-w-[44px] sm:h-8 sm:w-8 sm:min-h-8 sm:min-w-8 border-2 border-primary/25 bg-white/95 shadow-md",
             "text-primary hover:!bg-white hover:!text-primary focus-visible:!text-primary active:!text-primary",
             "[&_svg]:text-inherit",
             "disabled:opacity-40",
@@ -109,7 +120,7 @@ const PastEditionsCarousel = () => {
 
   return (
     <section className="py-16 md:py-20 bg-white border-y border-border/40" aria-labelledby="past-editions-heading">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-3 sm:px-6">
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <h2
             id="past-editions-heading"
