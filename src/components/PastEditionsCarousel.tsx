@@ -80,13 +80,18 @@ function EditionCarousel({ items, editionKey }: { items: PastEditionMedia[]; edi
         </CarouselContent>
         <CarouselPrevious
           className={cn(
-            "left-0 sm:left-1 border-primary/20 bg-white/95 shadow-md hover:bg-white",
+            "left-0 sm:left-1 border-2 border-primary/25 bg-white/95 shadow-md",
+            // outline: hover:text-primary-foreground + fundal alb = săgeată invizibilă — forțăm culoarea iconului
+            "text-primary hover:!bg-white hover:!text-primary focus-visible:!text-primary active:!text-primary",
+            "[&_svg]:text-inherit",
             "disabled:opacity-40",
           )}
         />
         <CarouselNext
           className={cn(
-            "right-0 sm:right-1 border-primary/20 bg-white/95 shadow-md hover:bg-white",
+            "right-0 sm:right-1 border-2 border-primary/25 bg-white/95 shadow-md",
+            "text-primary hover:!bg-white hover:!text-primary focus-visible:!text-primary active:!text-primary",
+            "[&_svg]:text-inherit",
             "disabled:opacity-40",
           )}
         />
