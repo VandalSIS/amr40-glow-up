@@ -70,7 +70,7 @@ function EditionCarousel({ items, editionKey }: { items: PastEditionMedia[]; edi
                   <img
                     src={item.src}
                     alt={`Momente retreat — ${editionKey}, ${index + 1}`}
-                    className="h-full w-full max-h-full object-contain object-center"
+                    className="h-full w-full max-h-full object-contain object-center [image-orientation:from-image]"
                     loading="lazy"
                     decoding="async"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 896px"

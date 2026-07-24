@@ -31,13 +31,18 @@ export function resizePastEditionGalleryPlugin(): Plugin {
         const raw = chunk.source;
         const buffer = Buffer.isBuffer(raw) ? raw : Buffer.from(raw);
 
-        const meta = await sharp(buffer).metadata();
-        if (!meta.width || meta.width <= MAX_WIDTH) continue;
+        // .rotate() fără argumente = aplică EXIF orientation (poze de pe telefon „întoarse”)
+        // Apoi pe buffer-ul corect orientat: resize + re-encode
+        const oriented = await sharp(buffer).rotate().toBuffer();
+        const meta = await sharp(oriented).metadata();
 
-        const pipeline = sharp(buffer).resize({
-          width: MAX_WIDTH,
-          withoutEnlargement: true,
-        });
+        let pipeline = sharp(oriented);
+        if (meta.width && meta.width > MAX_WIDTH) {
+          pipeline = pipeline.resize({
+            width: MAX_WIDTH,
+            withoutEnlargement: true,
+          });
+        }
 
         const fmt = meta.format;
         let out: Buffer;
@@ -52,16 +57,20 @@ export function resizePastEditionGalleryPlugin(): Plugin {
             })
             .toBuffer();
         } else if (fmt === "png") {
-          out = await pipeline.png({ compressionLevel: 9, quality: 85, progressive: true }).toBuffer();
+          out = await pipeline
+            .png({ compressionLevel: 9, quality: 85, progressive: true })
+            .toBuffer();
         } else if (fmt === "webp") {
-          out = await pipeline.webp({
-            quality: 78,
-            effort: 6,
-            preset: "photo",
-            smartSubsample: true,
-          }).toBuffer();
+          out = await pipeline
+            .webp({
+              quality: 78,
+              effort: 6,
+              preset: "photo",
+              smartSubsample: true,
+            })
+            .toBuffer();
         } else {
-          continue;
+          out = oriented;
         }
 
         chunk.source = out;
