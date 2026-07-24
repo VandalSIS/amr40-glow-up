@@ -18,7 +18,7 @@ function collectFromGlob(modules: Record<string, string>): PastEditionMedia[] {
     .sort((a, b) => a.key.localeCompare(b.key, undefined, { numeric: true }));
 }
 
-/** Fișiere în `src/assets/editia-1/` — jpg, png, webp, mp4, webm, mov */
+/** Fișiere în `src/assets/editia-1/` */
 const edition1Modules = import.meta.glob<string>(
   "../assets/editia-1/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP,mp4,webm,MP4,WEBM,mov,MOV}",
   { eager: true, import: "default" },
@@ -30,5 +30,12 @@ const edition2Modules = import.meta.glob<string>(
   { eager: true, import: "default" },
 );
 
+/** Fișiere în `src/assets/editia-3/` */
+const edition3Modules = import.meta.glob<string>(
+  "../assets/editia-3/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP,mp4,webm,MP4,WEBM,mov,MOV}",
+  { eager: true, import: "default" },
+);
+
 export const pastEdition1Media = collectFromGlob(edition1Modules);
 export const pastEdition2Media = collectFromGlob(edition2Modules);
+export const pastEdition3Media = collectFromGlob(edition3Modules);

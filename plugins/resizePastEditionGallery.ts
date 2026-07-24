@@ -1,12 +1,12 @@
 import type { Plugin } from "vite";
 import type { OutputBundle } from "rollup";
 
-/** Lățime maximă pentru pozele din carousel (ediția I & II); păstrează aspect ratio. */
+/** Lățime maximă pentru pozele din carousel (edițiile I–III); păstrează aspect ratio. */
 const MAX_WIDTH = 1920;
 
 function isPastEditionAsset(pathFragment: string): boolean {
   const n = pathFragment.replace(/\\/g, "/");
-  return /(^|\/)editia-[12]\//i.test(n);
+  return /(^|\/)editia-[123]\//i.test(n);
 }
 
 export function resizePastEditionGalleryPlugin(): Plugin {
