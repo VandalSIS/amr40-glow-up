@@ -12,7 +12,7 @@
 //    TEMPLATE 1 - Notificare pentru tine (menopauzactiva@gmail.com):
 //    - To Email: menopauzactiva@gmail.com
 //    - Subject: Cerere nouă de contact - {{from_name}}
-//    - Variables: {{from_name}}, {{from_email}}, {{from_phone}}, {{message}}
+//    - Variables: {{from_name}}, {{from_email}}, {{from_phone}}, {{message}}, {{reservation_option}}
 //    
 //    TEMPLATE 2 - Email automat de mulțumire pentru client:
 //    - To Email: {{from_email}} (important!)
@@ -44,6 +44,9 @@ Telefon: {{from_phone}}
 
 Mesaj:
 {{message}}
+
+(Opțional, dacă ai adăugat în template:)
+Opțiune: {{reservation_option}}
 
 ---
 Acest mesaj a fost trimis de pe site-ul Metoda AMR 35+

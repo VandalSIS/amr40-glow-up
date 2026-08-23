@@ -9,9 +9,16 @@ interface SimpleContactFormProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
+  /** Detalii rezervare (cameră + ediție) — apar în emailul de notificare */
+  reservationDetails?: string;
 }
 
-const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: SimpleContactFormProps) => {
+const SimpleContactForm = ({
+  isOpen,
+  onClose,
+  title = "Contactează-mă",
+  reservationDetails,
+}: SimpleContactFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,13 +35,29 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
     setIsSubmitting(true);
 
     try {
+      const reservationBlock = reservationDetails
+        ? `Opțiune aleasă: ${reservationDetails}\n`
+        : title.startsWith("Rezervare ")
+          ? `Opțiune aleasă: ${title.replace(/^Rezervare\s+/, "")}\n`
+          : "";
+
+      const messageBody = [
+        reservationBlock.trim(),
+        `Nume: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Telefon: ${formData.phone}`,
+      ]
+        .filter(Boolean)
+        .join("\n");
+
       // Email 1: Notificare către menopauzactiva@gmail.com
       const notificationParams = {
         from_name: formData.name,
         from_email: formData.email,
         from_phone: formData.phone,
         to_email: emailjsConfig.toEmail,
-        message: `Nume: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}`
+        reservation_option: reservationDetails || title,
+        message: messageBody,
       };
 
       await emailjs.send(
@@ -125,6 +148,11 @@ const SimpleContactForm = ({ isOpen, onClose, title = "Contactează-mă" }: Simp
               <h2 className="font-serif text-2xl font-bold text-primary mb-2">
                 {title}
               </h2>
+              {reservationDetails && (
+                <p className="font-accent text-sm font-semibold text-accent mb-2">
+                  {reservationDetails}
+                </p>
+              )}
               <p className="font-sans text-gray-600 text-sm leading-relaxed">
                 Completează formularul și te voi contacta în cel mai scurt timp.
               </p>

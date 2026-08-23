@@ -168,7 +168,8 @@ const Pricing = () => {
       <SimpleContactForm 
         isOpen={isContactPopupOpen}
         onClose={() => setIsContactPopupOpen(false)}
-        title={`Rezervare ${selectedOption}`}
+        title="Rezervare"
+        reservationDetails={selectedOption}
       />
     </section>
   );

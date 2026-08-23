@@ -21,7 +21,7 @@ const AMRMethod = () => {
     {
       icon: Heart,
       letter: "R",
-      title: "Recuperare",
+      title: "Refacere",
       subtitle: "Elementul secret",
       description: "Mușchii se construiesc și grăsimea se arde în timp ce te odihnești, după ce te-ai antrenat și după ce ai mâncat ce trebuie. Te învăț cum să faci asta perfect.",
       benefits: []

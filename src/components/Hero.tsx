@@ -38,7 +38,7 @@ const Hero = () => {
               Metoda A.M.R. 35+ by Iulia Popa
             </h2>
             <p className="font-accent text-lg sm:text-xl tracking-wide">
-              Antrenament • Mâncare • Recuperare
+              Antrenament • Mâncare • Refacere
             </p>
           </div>
           
