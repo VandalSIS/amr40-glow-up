@@ -2,6 +2,7 @@ import inBodyLogo from "@/assets/inbody-logo.jpg";
 import proNutritionLogo from "@/assets/pro-nutrition-logo.jpg";
 import caffeCostadoroLogo from "@/assets/caffe-costadoro-logo.jpg";
 import ginsima from "@/assets/ginsima.png";
+import artesanaLogo from "@/assets/artesana-logo.png";
 import obioLogo from "@/assets/LOGO_Obio(RGB)-01.png";
 import biocyteLogo from "@/assets/WhatsApp Image 2025-10-28 at 16.26.31_6eb9dedf.jpg";
 import zimbriaLogo from "@/assets/Logo color.png";
@@ -23,6 +24,10 @@ const Sponsors = () => {
     {
       logo: ginsima,
       url: "https://ginissima.ro/",
+    },
+    {
+      logo: artesanaLogo,
+      url: "https://artesana.ro/",
     },
     {
       logo: obioLogo,
