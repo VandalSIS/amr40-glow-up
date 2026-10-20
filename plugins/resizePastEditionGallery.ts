@@ -6,7 +6,7 @@ const MAX_WIDTH = 1920;
 
 function isPastEditionAsset(pathFragment: string): boolean {
   const n = pathFragment.replace(/\\/g, "/");
-  return /(^|\/)editia-[123]\//i.test(n);
+  return /(^|\/)editia-[1-4]\//i.test(n);
 }
 
 export function resizePastEditionGalleryPlugin(): Plugin {

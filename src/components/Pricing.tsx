@@ -1,28 +1,27 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Check, MapPin, Calendar, Users, AlertTriangle } from "lucide-react";
+import { Check, MapPin, Calendar, Users } from "lucide-react";
 import SimpleContactForm from "./SimpleContactForm";
-
-const editions = [
-  { id: "editia-4", label: "1-4 octombrie 2026", sublabel: "Ediția a IV-a" },
-  { id: "editia-5", label: "5-8 noiembrie 2026", sublabel: "Ediția a V-a" },
-];
+import { getRetreatOffer } from "@/config/retreatOffer";
 
 const Pricing = () => {
+  const offer = getRetreatOffer();
   const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
-  const [selectedEdition, setSelectedEdition] = useState(editions[0].id);
+  const [selectedEditionId, setSelectedEditionId] = useState(offer.editions[0].id);
+
+  const selectedEdition =
+    offer.editions.find((edition) => edition.id === selectedEditionId) ?? offer.editions[0];
 
   const handleReservation = (optionType: string) => {
-    const edition = editions.find((e) => e.id === selectedEdition);
-    setSelectedOption(`${optionType} – ${edition?.sublabel} (${edition?.label})`);
+    setSelectedOption(`${optionType} – ${selectedEdition.sublabel} (${selectedEdition.label})`);
     setIsContactPopupOpen(true);
   };
 
   const pricingOptions = [
     {
       type: "Cameră single",
-      price: "1299€",
+      price: offer.singlePrice,
       description: "Confort complet și intimitate pentru concentrare maximă",
       features: [
         "Camera single cu baie privată",
@@ -36,7 +35,7 @@ const Pricing = () => {
     },
     {
       type: "Cameră dublă",
-      price: "1099€",
+      price: offer.doublePrice,
       description: "Experiență completă cu posibilitatea de a împărți cu o prietenă",
       features: [
         "Camera dublă cu baie privată",
@@ -61,7 +60,15 @@ const Pricing = () => {
             Alătură-te unei experiențe all-inclusive de 4 zile, într-o locație luxoasă de 5 stele.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 ${offer.chooseEdition ? "mb-8" : "mb-12"}`}>
+            {!offer.chooseEdition && (
+              <div className="flex items-center gap-2 text-foreground">
+                <Calendar className="h-5 w-5 text-accent" />
+                <span className="font-accent font-medium">
+                  {selectedEdition.label} — {selectedEdition.sublabel}
+                </span>
+              </div>
+            )}
             <div className="flex items-center gap-2 text-foreground">
               <MapPin className="h-5 w-5 text-accent" />
               <span className="font-accent font-medium">Domeniul Toma, Covasna</span>
@@ -72,29 +79,36 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/* Edition selector */}
-          <div className="mb-12">
-            <p className="font-accent font-semibold text-foreground mb-4 flex items-center justify-center gap-2">
-              <Calendar className="h-5 w-5 text-accent" />
-              Alege ediția la care vrei să participi:
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {editions.map((edition) => (
-                <button
-                  key={edition.id}
-                  onClick={() => setSelectedEdition(edition.id)}
-                  className={`px-5 py-3 rounded-xl border-2 transition-all duration-200 text-left ${
-                    selectedEdition === edition.id
-                      ? "border-accent bg-accent text-white shadow-elegant"
-                      : "border-border bg-white text-foreground hover:border-accent/60"
-                  }`}
-                >
-                  <p className="font-accent font-semibold text-sm leading-tight">{edition.label}</p>
-                  <p className={`font-sans text-xs leading-tight mt-0.5 ${selectedEdition === edition.id ? "text-white/80" : "text-muted-foreground"}`}>{edition.sublabel}</p>
-                </button>
-              ))}
+          {offer.chooseEdition && (
+            <div className="mb-12">
+              <p className="font-accent font-semibold text-foreground mb-4 flex items-center justify-center gap-2">
+                <Calendar className="h-5 w-5 text-accent" />
+                Alege ediția din 2027:
+              </p>
+              <div className="grid sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+                {offer.editions.map((edition) => {
+                  const isSelected = selectedEditionId === edition.id;
+                  return (
+                    <button
+                      key={edition.id}
+                      type="button"
+                      onClick={() => setSelectedEditionId(edition.id)}
+                      className={`px-4 py-4 rounded-2xl border-2 transition-all duration-200 text-center ${
+                        isSelected
+                          ? "border-accent bg-accent text-white shadow-elegant"
+                          : "border-border bg-white text-foreground hover:border-accent/60"
+                      }`}
+                    >
+                      <p className="font-accent font-semibold text-sm leading-tight">{edition.label}</p>
+                      <p className={`font-sans text-xs leading-tight mt-1 ${isSelected ? "text-white/80" : "text-muted-foreground"}`}>
+                        {edition.sublabel}
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">

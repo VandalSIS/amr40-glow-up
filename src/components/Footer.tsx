@@ -1,5 +1,6 @@
 import { MapPin, Mail, Phone, Calendar, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getRetreatOffer } from "@/config/retreatOffer";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -50,15 +51,12 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              {[
-                { date: "1-4 octombrie 2026", editie: "Ediția a IV-a" },
-                { date: "5-8 noiembrie 2026", editie: "Ediția a V-a" },
-              ].map((e) => (
-                <div key={e.editie} className="flex items-center gap-3">
+              {getRetreatOffer().editions.map((e) => (
+                <div key={e.id} className="flex items-center gap-3">
                   <Calendar className="h-4 w-4 text-accent flex-shrink-0" />
                   <div>
-                    <p className="font-accent font-semibold text-sm">{e.date}</p>
-                    <p className="font-sans text-xs text-primary-foreground/70">{e.editie} • 4 zile de transformare</p>
+                    <p className="font-accent font-semibold text-sm">{e.label}</p>
+                    <p className="font-sans text-xs text-primary-foreground/70">{e.sublabel} • 4 zile de transformare</p>
                   </div>
                 </div>
               ))}

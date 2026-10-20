@@ -12,6 +12,7 @@ import {
   pastEdition1Media,
   pastEdition2Media,
   pastEdition3Media,
+  pastEdition4Media,
   type PastEditionMedia,
 } from "@/lib/pastEditionsMedia";
 import { cn } from "@/lib/utils";
@@ -119,7 +120,8 @@ const PastEditionsCarousel = () => {
   const hasAny =
     pastEdition1Media.length > 0 ||
     pastEdition2Media.length > 0 ||
-    pastEdition3Media.length > 0;
+    pastEdition3Media.length > 0 ||
+    pastEdition4Media.length > 0;
   const tabsRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -145,7 +147,7 @@ const PastEditionsCarousel = () => {
           <div ref={tabsRef}>
           <TabsList
             className={cn(
-              "grid w-full max-w-lg mx-auto grid-cols-3 mb-8 h-11",
+              "grid w-full max-w-xl mx-auto grid-cols-2 sm:grid-cols-4 mb-8 h-auto",
               "bg-section-bg border border-border",
             )}
           >
@@ -167,6 +169,12 @@ const PastEditionsCarousel = () => {
             >
               Ediția III
             </TabsTrigger>
+            <TabsTrigger
+              value="editia-4"
+              className="font-accent data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              Ediția IV
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="editia-1" className="mt-0 outline-none">
@@ -178,14 +186,16 @@ const PastEditionsCarousel = () => {
           <TabsContent value="editia-3" className="mt-0 outline-none">
             <EditionCarousel items={pastEdition3Media} editionKey="editia-3" />
           </TabsContent>
+          <TabsContent value="editia-4" className="mt-0 outline-none">
+            <EditionCarousel items={pastEdition4Media} editionKey="editia-4" />
+          </TabsContent>
           </div>
         </Tabs>
 
         {!hasAny && (
           <p className="font-sans text-sm text-center text-muted-foreground mt-6">
-            Folderele <code className="text-xs bg-muted px-1 rounded">editia-1</code>,{" "}
-            <code className="text-xs bg-muted px-1 rounded">editia-2</code> și{" "}
-            <code className="text-xs bg-muted px-1 rounded">editia-3</code> sunt în{" "}
+            Folderele <code className="text-xs bg-muted px-1 rounded">editia-1</code> până la{" "}
+            <code className="text-xs bg-muted px-1 rounded">editia-4</code> sunt în{" "}
             <code className="text-xs bg-muted px-1 rounded">src/assets/</code>.
           </p>
         )}
