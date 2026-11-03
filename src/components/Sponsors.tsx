@@ -6,41 +6,88 @@ import artesanaLogo from "@/assets/artesana-logo.png";
 import obioLogo from "@/assets/LOGO_Obio(RGB)-01.png";
 import biocyteLogo from "@/assets/WhatsApp Image 2025-10-28 at 16.26.31_6eb9dedf.jpg";
 import zimbriaLogo from "@/assets/Logo color.png";
+import adyaLogo from "@/assets/adya-logo.png";
+import hadriLogo from "@/assets/hadri-health-logo.png";
+import uptownLogo from "@/assets/uptown-esthetics-logo.png";
+import corneliaLogo from "@/assets/cornelia-olive-oil-logo.png";
+import motricLogo from "@/assets/motric-recovery-logo.png";
+import nucaLogo from "@/assets/nuca-organic-logo.jpg";
 
 const Sponsors = () => {
   const sponsors = [
     {
       logo: inBodyLogo,
+      name: "InBody",
       url: "",
     },
     {
       logo: proNutritionLogo,
+      name: "Pro Nutrition",
       url: "https://www.pronutrition.ro/",
     },
     {
       logo: caffeCostadoroLogo,
+      name: "Caffè Costadoro",
       url: "",
     },
     {
       logo: ginsima,
+      name: "Ginissima",
       url: "https://ginissima.ro/",
     },
     {
       logo: artesanaLogo,
+      name: "Artesana",
       url: "https://artesana.ro/",
     },
     {
       logo: obioLogo,
+      name: "Obio",
       url: "https://www.obio.ro/",
     },
     {
       logo: biocyteLogo,
+      name: "Biocyte",
       url: "https://www.biocyte.ro/",
     },
     {
       logo: zimbriaLogo,
+      name: "Zimbria",
       url: "https://zimbria.ro/",
-    }
+    },
+    {
+      logo: adyaLogo,
+      name: "ADYA",
+      url: "",
+    },
+    {
+      logo: hadriLogo,
+      name: "HADRI Health",
+      url: "",
+    },
+    {
+      logo: uptownLogo,
+      name: "Uptown Esthetics",
+      url: "",
+      dark: true,
+    },
+    {
+      logo: corneliaLogo,
+      name: "Cornelia Olive Oil",
+      url: "",
+      dark: true,
+    },
+    {
+      logo: nucaLogo,
+      name: "Nuca Organic",
+      url: "",
+    },
+    {
+      logo: motricLogo,
+      name: "Clinica Motric Recovery",
+      url: "",
+      dark: true,
+    },
   ];
 
   return (
@@ -55,14 +102,14 @@ const Sponsors = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto justify-items-center">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto justify-items-center">
           {sponsors.map((sponsor, index) => {
             const content = (
-              <div className="bg-white rounded-xl p-4 mx-auto w-fit">
+              <div className={`rounded-xl p-4 mx-auto w-full max-w-[220px] ${sponsor.dark ? "bg-black" : "bg-white"}`}>
                 <img 
                   src={sponsor.logo} 
-                  alt={`Partener ${index + 1}`}
-                  className="h-16 w-auto object-contain mx-auto"
+                  alt={sponsor.name}
+                  className="h-16 w-auto max-w-full object-contain mx-auto"
                   loading="lazy"
                   decoding="async"
                 />
@@ -71,20 +118,20 @@ const Sponsors = () => {
 
             return sponsor.url ? (
               <a
-                key={index}
+                key={sponsor.name}
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center cursor-pointer"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center cursor-pointer w-full"
+                style={{ animationDelay: `${Math.min(index * 0.08, 0.8)}s` }}
               >
                 {content}
               </a>
             ) : (
               <div 
-                key={index}
-                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                key={sponsor.name}
+                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center w-full"
+                style={{ animationDelay: `${Math.min(index * 0.08, 0.8)}s` }}
               >
                 {content}
               </div>

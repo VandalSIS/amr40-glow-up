@@ -2,28 +2,37 @@ export type RetreatEdition = {
   id: string;
   label: string;
   sublabel: string;
+  /** Level 1 = rezervare cameră; Level 2 = doar contact direct */
+  level: 1 | 2;
 };
 
-/** Din 5 noiembrie 2026 (ora României) se afișează edițiile 2027 și prețurile +200€. */
-const SWITCH_AT = Date.parse("2026-11-05T00:00:00+02:00");
-
-const edition2026: RetreatEdition[] = [
-  { id: "editia-5", label: "5-8 noiembrie 2026", sublabel: "Ediția a V-a" },
+/** Calendar 2027 — activ acum (înlocuiește 5-8 noiembrie 2026). Prețuri +200€ față de 2026. */
+export const editions2027: RetreatEdition[] = [
+  {
+    id: "level1-martie",
+    label: "25-28 martie 2027",
+    sublabel: "Level 1",
+    level: 1,
+  },
+  {
+    id: "level2-mai",
+    label: "9-15 mai 2027",
+    sublabel: "Level 2",
+    level: 2,
+  },
+  {
+    id: "level1-octombrie",
+    label: "7-10 octombrie 2027",
+    sublabel: "Level 1",
+    level: 1,
+  },
 ];
 
-const editions2027: RetreatEdition[] = [
-  { id: "editia-6", label: "2-5 iulie 2027", sublabel: "Ediția a VI-a" },
-  { id: "editia-7", label: "1-4 octombrie 2027", sublabel: "Ediția a VII-a" },
-  { id: "editia-8", label: "5-8 noiembrie 2027", sublabel: "Ediția a VIII-a" },
-];
-
-export function getRetreatOffer(now = new Date()) {
-  const nextYear = now.getTime() >= SWITCH_AT;
-
+export function getRetreatOffer() {
   return {
-    editions: nextYear ? editions2027 : edition2026,
-    singlePrice: nextYear ? "1499€" : "1299€",
-    doublePrice: nextYear ? "1299€" : "1099€",
-    chooseEdition: nextYear,
+    editions: editions2027,
+    singlePrice: "1499€",
+    doublePrice: "1299€",
+    chooseEdition: true,
   };
 }
