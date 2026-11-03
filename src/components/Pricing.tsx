@@ -39,7 +39,7 @@ const Pricing = () => {
   const pricingOptions = [
     {
       type: "Cameră single",
-      price: offer.singlePrice,
+      price: selectedEdition.singlePrice,
       description: "Confort complet și intimitate pentru concentrare maximă",
       features: [
         "Camera single cu baie privată",
@@ -53,7 +53,7 @@ const Pricing = () => {
     },
     {
       type: "Cameră dublă",
-      price: offer.doublePrice,
+      price: selectedEdition.doublePrice,
       description: "Experiență completă cu posibilitatea de a împărți cu o prietenă",
       features: [
         "Camera dublă cu baie privată",
@@ -92,9 +92,9 @@ const Pricing = () => {
           <div className="mb-12">
             <p className="font-accent font-semibold text-foreground mb-4 flex items-center justify-center gap-2">
               <Calendar className="h-5 w-5 text-accent" />
-              Alege ediția din 2027:
+              Alege ediția:
             </p>
-            <div className="grid sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl mx-auto">
               {offer.editions.map((edition) => {
                 const isSelected = selectedEditionId === edition.id;
                 return (
