@@ -12,82 +12,32 @@ import uptownLogo from "@/assets/uptown-esthetics-logo.png";
 import corneliaLogo from "@/assets/cornelia-olive-oil-logo.png";
 import motricLogo from "@/assets/motric-recovery-logo.png";
 import nucaLogo from "@/assets/nuca-organic-logo.jpg";
+import { cn } from "@/lib/utils";
+
+type Sponsor = {
+  logo: string;
+  name: string;
+  url: string;
+  /** Logo pe fundal negru / contrast mare — cardul e întunecat */
+  dark?: boolean;
+};
 
 const Sponsors = () => {
-  const sponsors = [
-    {
-      logo: inBodyLogo,
-      name: "InBody",
-      url: "",
-    },
-    {
-      logo: proNutritionLogo,
-      name: "Pro Nutrition",
-      url: "https://www.pronutrition.ro/",
-    },
-    {
-      logo: caffeCostadoroLogo,
-      name: "Caffè Costadoro",
-      url: "",
-    },
-    {
-      logo: ginsima,
-      name: "Ginissima",
-      url: "https://ginissima.ro/",
-    },
-    {
-      logo: artesanaLogo,
-      name: "Artesana",
-      url: "https://artesana.ro/",
-    },
-    {
-      logo: obioLogo,
-      name: "Obio",
-      url: "https://www.obio.ro/",
-    },
-    {
-      logo: biocyteLogo,
-      name: "Biocyte",
-      url: "https://www.biocyte.ro/",
-    },
-    {
-      logo: zimbriaLogo,
-      name: "Zimbria",
-      url: "https://zimbria.ro/",
-    },
-    {
-      logo: adyaLogo,
-      name: "ADYA",
-      url: "",
-    },
-    {
-      logo: hadriLogo,
-      name: "HADRI Health",
-      url: "",
-    },
-    {
-      logo: uptownLogo,
-      name: "Uptown Esthetics",
-      url: "",
-      dark: true,
-    },
-    {
-      logo: corneliaLogo,
-      name: "Cornelia Olive Oil",
-      url: "",
-      dark: true,
-    },
-    {
-      logo: nucaLogo,
-      name: "Nuca Organic",
-      url: "",
-    },
-    {
-      logo: motricLogo,
-      name: "Clinica Motric Recovery",
-      url: "",
-      dark: true,
-    },
+  const sponsors: Sponsor[] = [
+    { logo: inBodyLogo, name: "InBody", url: "" },
+    { logo: proNutritionLogo, name: "Pro Nutrition", url: "https://www.pronutrition.ro/" },
+    { logo: caffeCostadoroLogo, name: "Caffè Costadoro", url: "" },
+    { logo: ginsima, name: "Ginissima", url: "https://ginissima.ro/" },
+    { logo: artesanaLogo, name: "Artesana", url: "https://artesana.ro/" },
+    { logo: obioLogo, name: "Obio", url: "https://www.obio.ro/" },
+    { logo: biocyteLogo, name: "Biocyte", url: "https://www.biocyte.ro/" },
+    { logo: zimbriaLogo, name: "Zimbria", url: "https://zimbria.ro/" },
+    { logo: adyaLogo, name: "ADYA", url: "" },
+    { logo: hadriLogo, name: "HADRI Health", url: "" },
+    { logo: uptownLogo, name: "Uptown Esthetics", url: "", dark: true },
+    { logo: corneliaLogo, name: "Cornelia Olive Oil", url: "", dark: true },
+    { logo: nucaLogo, name: "Nuca Organic", url: "" },
+    { logo: motricLogo, name: "Clinica Motric Recovery", url: "", dark: true },
   ];
 
   return (
@@ -101,19 +51,26 @@ const Sponsors = () => {
             Colaborăm cu branduri de top pentru a-ți oferi cele mai bune produse și servicii
           </p>
         </div>
-        
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto justify-items-center">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto">
           {sponsors.map((sponsor, index) => {
-            const content = (
-              <div className={`rounded-xl p-4 mx-auto w-full max-w-[220px] ${sponsor.dark ? "bg-black" : "bg-white"}`}>
-                <img 
-                  src={sponsor.logo} 
-                  alt={sponsor.name}
-                  className="h-16 w-auto max-w-full object-contain mx-auto"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            const cardClass = cn(
+              "group flex items-center justify-center h-28 sm:h-32 rounded-2xl border transition-all duration-300",
+              "hover:-translate-y-1 hover:shadow-elegant",
+              sponsor.dark
+                ? "bg-neutral-950 border-neutral-800"
+                : "bg-white border-border shadow-card",
+              sponsor.url && "cursor-pointer",
+            );
+
+            const image = (
+              <img
+                src={sponsor.logo}
+                alt={sponsor.name}
+                className="max-h-14 sm:max-h-16 w-auto max-w-[75%] object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             );
 
             return sponsor.url ? (
@@ -122,26 +79,29 @@ const Sponsors = () => {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center cursor-pointer w-full"
-                style={{ animationDelay: `${Math.min(index * 0.08, 0.8)}s` }}
+                className={cardClass}
+                style={{ animationDelay: `${Math.min(index * 0.05, 0.6)}s` }}
+                aria-label={sponsor.name}
               >
-                {content}
+                {image}
               </a>
             ) : (
-              <div 
+              <div
                 key={sponsor.name}
-                className="group animate-fade-in bg-section-bg p-6 rounded-2xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 text-center w-full"
-                style={{ animationDelay: `${Math.min(index * 0.08, 0.8)}s` }}
+                className={cardClass}
+                style={{ animationDelay: `${Math.min(index * 0.05, 0.6)}s` }}
+                aria-label={sponsor.name}
               >
-                {content}
+                {image}
               </div>
             );
           })}
         </div>
-        
+
         <div className="text-center mt-12">
           <p className="font-sans text-sm text-muted-foreground italic">
-            Mulțumim partenerilor noștri pentru susținerea misiunii noastre de a ajuta femeile să își recapete controlul asupra sănătății
+            Mulțumim partenerilor noștri pentru susținerea misiunii noastre de a ajuta femeile să își
+            recapete controlul asupra sănătății
           </p>
         </div>
       </div>
