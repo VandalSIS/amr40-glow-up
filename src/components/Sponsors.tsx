@@ -12,14 +12,11 @@ import uptownLogo from "@/assets/uptown-esthetics-logo.png";
 import corneliaLogo from "@/assets/cornelia-olive-oil-logo.png";
 import motricLogo from "@/assets/motric-recovery-logo.png";
 import nucaLogo from "@/assets/nuca-organic-logo.jpg";
-import { cn } from "@/lib/utils";
 
 type Sponsor = {
   logo: string;
   name: string;
   url: string;
-  /** Logo pe fundal negru / contrast mare — cardul e întunecat */
-  dark?: boolean;
 };
 
 const Sponsors = () => {
@@ -34,10 +31,10 @@ const Sponsors = () => {
     { logo: zimbriaLogo, name: "Zimbria", url: "https://zimbria.ro/" },
     { logo: adyaLogo, name: "ADYA", url: "" },
     { logo: hadriLogo, name: "HADRI Health", url: "" },
-    { logo: uptownLogo, name: "Uptown Esthetics", url: "", dark: true },
-    { logo: corneliaLogo, name: "Cornelia Olive Oil", url: "", dark: true },
+    { logo: uptownLogo, name: "Uptown Esthetics", url: "" },
+    { logo: corneliaLogo, name: "Cornelia Olive Oil", url: "" },
     { logo: nucaLogo, name: "Nuca Organic", url: "" },
-    { logo: motricLogo, name: "Clinica Motric Recovery", url: "", dark: true },
+    { logo: motricLogo, name: "Clinica Motric Recovery", url: "" },
   ];
 
   return (
@@ -54,14 +51,8 @@ const Sponsors = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto">
           {sponsors.map((sponsor, index) => {
-            const cardClass = cn(
-              "group flex items-center justify-center h-28 sm:h-32 rounded-2xl border transition-all duration-300",
-              "hover:-translate-y-1 hover:shadow-elegant",
-              sponsor.dark
-                ? "bg-neutral-950 border-neutral-800"
-                : "bg-white border-border shadow-card",
-              sponsor.url && "cursor-pointer",
-            );
+            const cardClass =
+              "group flex items-center justify-center h-28 sm:h-32 rounded-2xl border border-border bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant";
 
             const image = (
               <img
@@ -79,7 +70,7 @@ const Sponsors = () => {
                 href={sponsor.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={cardClass}
+                className={`${cardClass} cursor-pointer`}
                 style={{ animationDelay: `${Math.min(index * 0.05, 0.6)}s` }}
                 aria-label={sponsor.name}
               >
