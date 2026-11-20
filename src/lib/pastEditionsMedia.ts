@@ -42,7 +42,14 @@ const edition4Modules = import.meta.glob<string>(
   { eager: true, import: "default" },
 );
 
+/** Fișiere în `src/assets/editia-5/` */
+const edition5Modules = import.meta.glob<string>(
+  "../assets/editia-5/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP,mp4,webm,MP4,WEBM,mov,MOV}",
+  { eager: true, import: "default" },
+);
+
 export const pastEdition1Media = collectFromGlob(edition1Modules);
 export const pastEdition2Media = collectFromGlob(edition2Modules);
 export const pastEdition3Media = collectFromGlob(edition3Modules);
 export const pastEdition4Media = collectFromGlob(edition4Modules);
+export const pastEdition5Media = collectFromGlob(edition5Modules);
